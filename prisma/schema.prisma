@@ -1,0 +1,149 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id               String            @id @default(cuid())
+  email            String            @unique
+  name             String?
+  avatar           String?
+  passwordHash     String?
+  emailVerified    DateTime?
+  
+  // SEO Gamification
+  totalXP          Int               @default(0)
+  currentLevel     Int               @default(1)
+  seoTier          String            @default("CRAWL_BOT") // CRAWL_BOT, SERP_SCOUT, INDEX_STRATEGIST, ALGORITHM_ARCHITECT, SERP_OVERLORD
+
+  // Relations
+  experiments      Experiment[]
+  simulations      Simulation[]
+  badges           UserBadge[]
+  analytics        UserAnalytics[]
+  xpHistory        XPEvent[]
+
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+}
+
+model Experiment {
+  id                 String       @id @default(cuid())
+  userId             String
+  user               User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  searchEngine       String       @default("GOOGLE") // GOOGLE, AI_OVERVIEW, BING, YOUTUBE, AMAZON, LOCAL_MAPS
+  contentType        String       @default("BLOG_ARTICLE") // BLOG_ARTICLE, PRODUCT_PAGE, LANDING_PAGE, PILLAR_GUIDE, CASE_STUDY, LOCAL_SERVICE
+  searchIntent       String       @default("INFORMATIONAL") // INFORMATIONAL, COMMERCIAL, TRANSACTIONAL, NAVIGATIONAL
+  
+  title              String
+  metaDescription    String?
+  urlSlug            String?
+  targetKeyword      String
+  secondaryKeywords  String       @default("[]") // JSON string array
+  body               String
+  
+  schemaType         String       @default("ARTICLE") // ARTICLE, FAQ_PAGE, PRODUCT, LOCAL_BUSINESS, HOW_TO, NONE
+  schemaMarkup       String?      // Optional custom JSON-LD
+  internalLinksCount Int          @default(0)
+  externalLinksCount Int          @default(0)
+  
+  // A/B Variant Testing
+  isSplitTest        Boolean      @default(false)
+  variantBTitle      String?
+  variantBMeta       String?
+
+  status             String       @default("DRAFT") // DRAFT, SIMULATED, ARCHIVED
+  simulations        Simulation[]
+
+  createdAt          DateTime     @default(now())
+  updatedAt          DateTime     @updatedAt
+}
+
+model Simulation {
+  id                   String      @id @default(cuid())
+  experimentId         String
+  experiment           Experiment  @relation(fields: [experimentId], references: [id], onDelete: Cascade)
+  userId               String
+  user                 User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  searchEngine         String
+  searchIntent         String
+
+  // Predicted SERP & Growth Metrics
+  predictedRank        Float       @default(10.0) // E.g. 1.2, 3.4, 8.5
+  predictedCtr         Float       @default(0)    // % CTR (e.g. 28.5)
+  monthlyImpressions   Int         @default(0)    // Estimated monthly searches exposed
+  monthlyClicks        Int         @default(0)    // Projected organic visits
+  trafficValue         Float       @default(0)    // Estimated organic value in USD ($)
+  geoCitationScore     Float       @default(0)    // 0-100% Generative Engine Optimization citation probability
+  eeatScore            Float       @default(0)    // 0-100 EEAT authority score
+  helpfulContentScore  Float       @default(0)    // 0-100 Google Helpful Content index
+  overallSeoScore      Float       @default(0)    // 0-100 Composite SEO score
+  richSnippetEligible  Boolean     @default(false)
+
+  // Factor Breakdowns & Projections (stored as JSON)
+  algorithmFactors     String?     // JSON object of factor name -> { score, weight, feedback }
+  recommendations      String?     // JSON string array
+  timeline             String?     // JSON array of monthly ranking & traffic projection
+  variantBResult       String?     // JSON object with Variant B comparison if split test
+
+  // AI Pro SEO Insights
+  aiIntentMatch        String?
+  aiInformationGain    String?
+  aiSnippetCritique    String?
+  aiStrategicAdvice    String?
+
+  status               String      @default("COMPLETED")
+  createdAt            DateTime    @default(now())
+}
+
+model Badge {
+  id          String      @id @default(cuid())
+  name        String      @unique
+  description String
+  iconEmoji   String      @default("🔍")
+  category    String      // MILESTONE, SERP_MASTERY, TECHNICAL_SEO, CONTENT_QUALITY, SPLIT_TESTING
+  criteria    String      // JSON: { type, threshold }
+  xpReward    Int         @default(50)
+  users       UserBadge[]
+}
+
+model UserBadge {
+  id        String    @id @default(cuid())
+  userId    String
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  badgeId   String
+  badge     Badge     @relation(fields: [badgeId], references: [id], onDelete: Cascade)
+  earnedAt  DateTime  @default(now())
+
+  @@unique([userId, badgeId])
+}
+
+model XPEvent {
+  id        String    @id @default(cuid())
+  userId    String
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  amount    Int
+  source    String    // experiment_run, perfect_score, split_test, badge_earned, daily_login
+  metadata  String?   // JSON
+  createdAt DateTime  @default(now())
+}
+
+model UserAnalytics {
+  id              String    @id @default(cuid())
+  userId          String
+  user            User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  date            DateTime
+  simulationsRun  Int       @default(0)
+  avgRank         Float     @default(10.0)
+  avgSeoScore     Float     @default(0)
+  topEngine       String?
+  xpEarned        Int       @default(0)
+
+  @@unique([userId, date])
+}
