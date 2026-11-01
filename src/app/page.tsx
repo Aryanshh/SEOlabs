@@ -83,7 +83,7 @@ export default function SeoLabsLanding() {
           </span>
         </Link>
 
-        <div style={{ height: 40, overflow: 'hidden', textAlign: 'center' }} aria-hidden="true">
+        <div className="tagline-cycle-wrapper" aria-hidden="true">
           <div
             className="tagline-cycle"
             style={{
@@ -170,8 +170,8 @@ export default function SeoLabsLanding() {
                   <div style={{ fontSize: 12, fontWeight: 800, color: 'var(--cl-emerald)', marginBottom: 4 }}>
                     PREDICTED RANK
                   </div>
-                  <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, marginBottom: 16 }}>
-                    <span style={{ fontSize: 54, fontWeight: 900, letterSpacing: -2, color: 'var(--cl-stone-900)' }}>
+                  <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, marginBottom: 16, flexWrap: 'wrap' }}>
+                    <span style={{ fontSize: 'clamp(36px, 9vw, 54px)', fontWeight: 900, letterSpacing: -2, color: 'var(--cl-stone-900)', lineHeight: 1 }}>
                       #1.2
                     </span>
                     <span style={{ fontSize: 16, fontWeight: 700, color: 'var(--cl-emerald)' }}>
