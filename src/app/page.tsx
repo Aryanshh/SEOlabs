@@ -216,11 +216,11 @@ export default function SeoLabsLanding() {
 
         {/* Features Section */}
         <section className="section" aria-labelledby="features-title">
-          <div className="reveal" style={{ textAlign: 'center', marginBottom: 70 }}>
-            <h2 id="features-title" style={{ fontSize: 52, fontWeight: 800, letterSpacing: -2, marginBottom: 20 }}>
-              A simulator that <span className="cursive" style={{ color: 'var(--cl-emerald)', fontSize: 72 }}>predicts</span>
+          <div className="reveal" style={{ textAlign: 'center', marginBottom: 48 }}>
+            <h2 id="features-title" className="section-heading">
+              A simulator that <span className="cursive" style={{ color: 'var(--cl-emerald)', fontSize: '1.25em' }}>predicts</span>
             </h2>
-            <p style={{ color: 'var(--cl-stone-500)', maxWidth: 620, margin: '0 auto', fontSize: 20 }}>
+            <p className="section-subheading">
               We built SEOlabs to be your tactical digital testing ground. Every simulation is grounded in real-world search algorithm ranking mechanics.
             </p>
           </div>
@@ -270,14 +270,14 @@ export default function SeoLabsLanding() {
 
         {/* Topical Authority: Algorithm Mechanics Guide */}
         <section className="section" aria-labelledby="guide-title">
-          <div className="reveal" style={{ textAlign: 'center', marginBottom: 50 }}>
-            <div style={{ fontSize: 12, fontWeight: 800, color: 'var(--cl-emerald)', textTransform: 'uppercase', letterSpacing: 1, marginBottom: 12 }}>
+          <div className="reveal" style={{ textAlign: 'center', marginBottom: 40 }}>
+            <span className="section-badge">
               Topical Knowledge Base
-            </div>
-            <h2 id="guide-title" style={{ fontSize: 44, fontWeight: 800, letterSpacing: -1 }}>
+            </span>
+            <h2 id="guide-title" className="section-heading">
               How Google Ranks Content in 2026
             </h2>
-            <p style={{ color: 'var(--cl-stone-500)', fontSize: 18, maxWidth: 680, margin: '14px auto 0' }}>
+            <p className="section-subheading">
               Modern search engines rely on multi-layered neural systems. Here is how SEOlabs quantifies the primary ranking pillars.
             </p>
           </div>
@@ -311,9 +311,9 @@ export default function SeoLabsLanding() {
 
         {/* Testimonials */}
         <section className="section" aria-labelledby="stories-title">
-          <div className="reveal" style={{ textAlign: 'center' }}>
-            <h2 id="stories-title" style={{ fontSize: 44, fontWeight: 800, letterSpacing: -1 }}>SEO Practitioner Stories</h2>
-            <p style={{ color: 'var(--cl-stone-500)', fontSize: 18, marginTop: 8 }}>How growth teams are eliminating SERP guesswork.</p>
+          <div className="reveal" style={{ textAlign: 'center', marginBottom: 32 }}>
+            <h2 id="stories-title" className="section-heading">SEO Practitioner Stories</h2>
+            <p className="section-subheading">How growth teams are eliminating SERP guesswork.</p>
           </div>
 
           <div className="diary-grid">
@@ -341,14 +341,14 @@ export default function SeoLabsLanding() {
 
         {/* FAQ Accordion Section (Rich Snippet Target) */}
         <section className="section" aria-labelledby="faq-title">
-          <div className="reveal" style={{ textAlign: 'center', marginBottom: 50 }}>
-            <div style={{ fontSize: 12, fontWeight: 800, color: 'var(--cl-emerald)', textTransform: 'uppercase', letterSpacing: 1, marginBottom: 12 }}>
+          <div className="reveal" style={{ textAlign: 'center', marginBottom: 40 }}>
+            <span className="section-badge">
               Frequently Asked Questions
-            </div>
-            <h2 id="faq-title" style={{ fontSize: 44, fontWeight: 800, letterSpacing: -1 }}>
+            </span>
+            <h2 id="faq-title" className="section-heading">
               Everything You Need to Know
             </h2>
-            <p style={{ color: 'var(--cl-stone-500)', fontSize: 18, maxWidth: 620, margin: '12px auto 0' }}>
+            <p className="section-subheading">
               Answers regarding SERP flight simulation, search algorithms, and ranking mechanics.
             </p>
           </div>
@@ -381,8 +381,8 @@ export default function SeoLabsLanding() {
         {/* Conversion - Waitlist */}
         <section className="section" aria-labelledby="cta-title">
           <div className="waitlist-card reveal">
-            <h2 id="cta-title" style={{ fontSize: 52, fontWeight: 800, letterSpacing: -2 }}>Ready for Page One?</h2>
-            <p style={{ color: 'var(--cl-stone-500)', fontSize: 20, marginTop: 14 }}>
+            <h2 id="cta-title" className="section-heading">Ready for Page One?</h2>
+            <p className="section-subheading" style={{ marginTop: 12 }}>
               Join thousands of SEO specialists simulating algorithms before indexing.
             </p>
 

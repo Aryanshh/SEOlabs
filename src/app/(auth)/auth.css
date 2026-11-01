@@ -63,3 +63,18 @@
   font-size: 13px;
   font-weight: 600;
 }
+
+@media (max-width: 480px) {
+  .auth-container {
+    padding: 16px;
+    align-items: flex-start;
+    padding-top: 36px;
+  }
+  .auth-card {
+    padding: 28px 20px;
+    border-radius: 24px;
+  }
+  .auth-header h1 {
+    font-size: 22px;
+  }
+}
