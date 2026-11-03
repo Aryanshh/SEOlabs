@@ -129,11 +129,16 @@ export default function SeoLabsLanding() {
           <div className="hero-split">
             <div className="hero-content">
               <h1 id="hero-title" className="reveal">
-                Master the <br />
-                algorithm, <span className="cursive cursive-word">intentionally</span>
+                <span className="hero-eyebrow">
+                  <span className="pulse-dot" aria-hidden="true" />
+                  SEOlabs™ Flight Simulator
+                </span>
+                <span className="hero-main-heading">
+                  Master the algorithm, <span className="cursive cursive-word">intentionally</span>
+                </span>
               </h1>
               <p className="reveal" style={{ transitionDelay: '0.2s' }}>
-                The flight simulator for search engines &amp; AI discovery. Test title tags, search intent, schema markup, and Generative Engine Optimization in a zero-risk lab before crawling begins.
+                <strong>SEOlabs</strong> is the algorithmic flight simulator for search engines &amp; AI discovery. Test title tags, search intent, schema markup, and Generative Engine Optimization in a zero-risk lab before crawling begins.
               </p>
               <div className="cta-group reveal" style={{ transitionDelay: '0.4s' }}>
                 <Link href="/dashboard/create" className="btn btn-primary">

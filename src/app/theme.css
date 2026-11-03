@@ -214,6 +214,49 @@ html, body {
   width: 100%;
 }
 
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cl-emerald);
+  background: rgba(5, 150, 105, 0.08);
+  border: 1px solid rgba(5, 150, 105, 0.22);
+  padding: 6px 14px;
+  border-radius: 9999px;
+  margin-bottom: 18px;
+  width: fit-content;
+  line-height: 1;
+}
+
+.pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--cl-emerald);
+  box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.6);
+  animation: pulse-ring 2s infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(5, 150, 105, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(5, 150, 105, 0);
+  }
+}
+
+.hero-main-heading {
+  display: block;
+}
+
 .hero h1 {
   font-size: clamp(40px, 5.5vw, 86px);
   font-weight: 800;
@@ -718,6 +761,12 @@ html, body {
     min-height: auto !important;
   }
 
+  .hero-eyebrow {
+    font-size: 11px !important;
+    padding: 4px 12px !important;
+    margin: 0 auto 12px !important;
+  }
+
   .hero h1 {
     font-size: clamp(30px, 8vw, 48px) !important;
     line-height: 1.05 !important;
@@ -928,6 +977,12 @@ html, body {
   .nav-cta {
     padding: 6px 12px !important;
     font-size: 11px !important;
+  }
+
+  .hero-eyebrow {
+    font-size: 11px !important;
+    padding: 4px 12px !important;
+    margin: 0 auto 12px !important;
   }
 
   .hero h1 {
