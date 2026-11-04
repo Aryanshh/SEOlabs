@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import './theme.css';
 import { GoogleIcon, AiOverviewIcon } from '@/components/Icons';
+import SeoPreloader from '@/components/SeoPreloader';
 
 export default function SeoLabsLanding() {
   const [email, setEmail] = useState('');
@@ -68,6 +69,9 @@ export default function SeoLabsLanding() {
 
   return (
     <div className="seolabs-landing">
+      {/* Innovative SEO Holographic Preloader */}
+      <SeoPreloader />
+
       <div className="grain-overlay" aria-hidden="true" />
       <div className="blob blob-1" aria-hidden="true" />
       <div className="blob blob-2" aria-hidden="true" />
