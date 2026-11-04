@@ -117,10 +117,10 @@ export default function SeoLabsLanding() {
         </div>
 
         <nav className="nav-links" aria-label="Main Navigation">
-          <Link href="/dashboard" className="nav-link">
-            Dashboard
+          <Link href="/login" className="nav-link">
+            Sign In
           </Link>
-          <Link href="/dashboard/create" className="nav-cta">
+          <Link href="/login" className="nav-cta">
             Launch SERP Lab
           </Link>
         </nav>
@@ -145,11 +145,11 @@ export default function SeoLabsLanding() {
                 <strong>SEOlabs</strong> is the algorithmic flight simulator for search engines &amp; AI discovery. Test title tags, search intent, schema markup, and Generative Engine Optimization in a zero-risk lab before crawling begins.
               </p>
               <div className="cta-group reveal" style={{ transitionDelay: '0.4s' }}>
-                <Link href="/dashboard/create" className="btn btn-primary">
+                <Link href="/login" className="btn btn-primary">
                   Launch SERP Lab
                 </Link>
-                <Link href="/dashboard" className="btn btn-secondary">
-                  Explore Overview
+                <Link href="/login" className="btn btn-secondary">
+                  Sign In
                 </Link>
               </div>
             </div>
@@ -435,10 +435,10 @@ export default function SeoLabsLanding() {
       <footer style={{ padding: '60px 24px', textAlign: 'center', color: 'var(--cl-stone-400)', fontSize: 14, borderTop: '1px solid var(--cl-stone-200)' }}>
         <div style={{ display: 'flex', justifyContent: 'center', gap: 24, marginBottom: 20, flexWrap: 'wrap' }}>
           <Link href="/" style={{ color: 'var(--cl-stone-500)', textDecoration: 'none', fontWeight: 600 }}>Home</Link>
-          <Link href="/dashboard" style={{ color: 'var(--cl-stone-500)', textDecoration: 'none', fontWeight: 600 }}>Dashboard</Link>
-          <Link href="/dashboard/create" style={{ color: 'var(--cl-stone-500)', textDecoration: 'none', fontWeight: 600 }}>SERP Lab</Link>
-          <Link href="/dashboard/ab-testing" style={{ color: 'var(--cl-stone-500)', textDecoration: 'none', fontWeight: 600 }}>A/B Split Arena</Link>
-          <Link href="/dashboard/leaderboard" style={{ color: 'var(--cl-stone-500)', textDecoration: 'none', fontWeight: 600 }}>Leaderboard</Link>
+          <Link href="/login" style={{ color: 'var(--cl-stone-500)', textDecoration: 'none', fontWeight: 600 }}>Sign In</Link>
+          <Link href="/login" style={{ color: 'var(--cl-stone-500)', textDecoration: 'none', fontWeight: 600 }}>SERP Lab</Link>
+          <Link href="/login" style={{ color: 'var(--cl-stone-500)', textDecoration: 'none', fontWeight: 600 }}>A/B Split Arena</Link>
+          <Link href="/login" style={{ color: 'var(--cl-stone-500)', textDecoration: 'none', fontWeight: 600 }}>Leaderboard</Link>
           <a href="https://github.com/Aryanshh/SEOlabs" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--cl-stone-500)', textDecoration: 'none', fontWeight: 600 }}>GitHub</a>
         </div>
         <p style={{ fontWeight: 600 }}>&copy; 2026 SEOlabs. Built for the next generation of search engine strategists.</p>

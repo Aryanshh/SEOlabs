@@ -745,8 +745,11 @@ html, body {
   }
 
   .nav-link {
-    font-size: 12px !important;
-    display: none; /* Hide secondary link on small screens to fit CTA comfortably */
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 6px 8px !important;
   }
 
   .nav-cta {
