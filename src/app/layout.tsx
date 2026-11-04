@@ -1,20 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Outfit, Reenie_Beanie } from 'next/font/google';
 import './globals.css';
-
-const outfit = Outfit({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700', '800', '900'],
-  variable: '--font-outfit',
-  display: 'swap',
-});
-
-const reenieBeanie = Reenie_Beanie({
-  subsets: ['latin'],
-  weight: ['400'],
-  variable: '--font-reenie',
-  display: 'swap',
-});
 
 export const viewport: Viewport = {
   themeColor: '#059669',
@@ -228,14 +213,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${outfit.variable} ${reenieBeanie.variable}`}>
+    <html lang="en">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Reenie+Beanie&display=swap"
+          rel="stylesheet"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={outfit.className}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
