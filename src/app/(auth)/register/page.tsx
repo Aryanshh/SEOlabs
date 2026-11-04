@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { signIn } from 'next-auth/react';
 import Link from 'next/link';
 import '../auth.css';
 
@@ -29,7 +30,19 @@ export default function RegisterPage() {
         throw new Error(data.error || 'Registration failed');
       }
 
-      router.push('/login');
+      // Automatically sign in the user
+      const signInResult = await signIn('credentials', {
+        email: email.toLowerCase().trim(),
+        password,
+        redirect: false,
+      });
+
+      if (signInResult?.ok) {
+        router.push('/dashboard');
+        router.refresh();
+      } else {
+        router.push('/login?registered=true');
+      }
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Registration failed');
     }
@@ -80,9 +93,10 @@ export default function RegisterPage() {
             <input
               type="password"
               className="input"
-              placeholder="••••••••"
+              placeholder="At least 6 characters"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              minLength={6}
               required
             />
           </div>

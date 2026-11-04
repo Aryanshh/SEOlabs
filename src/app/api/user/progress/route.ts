@@ -3,9 +3,14 @@ import prisma from '@/lib/prisma';
 import { getCurrentUser } from '@/lib/current-user';
 import { getTierForLevel, getXPProgress, getXPForNextLevel } from '@/lib/gamification';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
   try {
     const user = await getCurrentUser();
+    if (!user) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
 
     const badges = await prisma.userBadge.findMany({
       where: { userId: user.id },

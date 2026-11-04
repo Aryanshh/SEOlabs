@@ -15,6 +15,8 @@ const BADGES = [
   { name: 'Multi-Engine Master', description: 'Tested experiments across 4 different search engines', iconEmoji: '🌐', category: 'MILESTONE', criteria: JSON.stringify({ type: 'engine_count', threshold: 4 }), xpReward: 300 },
 ];
 
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
   try {
     for (const b of BADGES) {

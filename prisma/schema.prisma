@@ -3,7 +3,7 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
@@ -41,21 +41,21 @@ model Experiment {
   searchIntent       String       @default("INFORMATIONAL") // INFORMATIONAL, COMMERCIAL, TRANSACTIONAL, NAVIGATIONAL
   
   title              String
-  metaDescription    String?
+  metaDescription    String?      @db.Text
   urlSlug            String?
   targetKeyword      String
-  secondaryKeywords  String       @default("[]") // JSON string array
-  body               String
+  secondaryKeywords  String       @default("[]") @db.Text // JSON string array
+  body               String       @db.Text
   
   schemaType         String       @default("ARTICLE") // ARTICLE, FAQ_PAGE, PRODUCT, LOCAL_BUSINESS, HOW_TO, NONE
-  schemaMarkup       String?      // Optional custom JSON-LD
+  schemaMarkup       String?      @db.Text // Optional custom JSON-LD
   internalLinksCount Int          @default(0)
   externalLinksCount Int          @default(0)
   
   // A/B Variant Testing
   isSplitTest        Boolean      @default(false)
   variantBTitle      String?
-  variantBMeta       String?
+  variantBMeta       String?      @db.Text
 
   status             String       @default("DRAFT") // DRAFT, SIMULATED, ARCHIVED
   simulations        Simulation[]
@@ -87,16 +87,16 @@ model Simulation {
   richSnippetEligible  Boolean     @default(false)
 
   // Factor Breakdowns & Projections (stored as JSON)
-  algorithmFactors     String?     // JSON object of factor name -> { score, weight, feedback }
-  recommendations      String?     // JSON string array
-  timeline             String?     // JSON array of monthly ranking & traffic projection
-  variantBResult       String?     // JSON object with Variant B comparison if split test
+  algorithmFactors     String?     @db.Text // JSON object of factor name -> { score, weight, feedback }
+  recommendations      String?     @db.Text // JSON string array
+  timeline             String?     @db.Text // JSON array of monthly ranking & traffic projection
+  variantBResult       String?     @db.Text // JSON object with Variant B comparison if split test
 
   // AI Pro SEO Insights
-  aiIntentMatch        String?
-  aiInformationGain    String?
-  aiSnippetCritique    String?
-  aiStrategicAdvice    String?
+  aiIntentMatch        String?     @db.Text
+  aiInformationGain    String?     @db.Text
+  aiSnippetCritique    String?     @db.Text
+  aiStrategicAdvice    String?     @db.Text
 
   status               String      @default("COMPLETED")
   createdAt            DateTime    @default(now())
@@ -105,10 +105,10 @@ model Simulation {
 model Badge {
   id          String      @id @default(cuid())
   name        String      @unique
-  description String
+  description String      @db.Text
   iconEmoji   String      @default("🔍")
   category    String      // MILESTONE, SERP_MASTERY, TECHNICAL_SEO, CONTENT_QUALITY, SPLIT_TESTING
-  criteria    String      // JSON: { type, threshold }
+  criteria    String      @db.Text // JSON: { type, threshold }
   xpReward    Int         @default(50)
   users       UserBadge[]
 }
@@ -130,7 +130,7 @@ model XPEvent {
   user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
   amount    Int
   source    String    // experiment_run, perfect_score, split_test, badge_earned, daily_login
-  metadata  String?   // JSON
+  metadata  String?   @db.Text // JSON
   createdAt DateTime  @default(now())
 }
 

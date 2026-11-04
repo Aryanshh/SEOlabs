@@ -1,11 +1,13 @@
 'use client';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { useSession, signOut } from 'next-auth/react';
 import './theme.css';
 import { GoogleIcon, AiOverviewIcon } from '@/components/Icons';
 import SeoPreloader from '@/components/SeoPreloader';
 
 export default function SeoLabsLanding() {
+  const { data: session } = useSession();
   const [email, setEmail] = useState('');
   const [joined, setJoined] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -117,12 +119,30 @@ export default function SeoLabsLanding() {
         </div>
 
         <nav className="nav-links" aria-label="Main Navigation">
-          <Link href="/login" className="nav-link">
-            Sign In
-          </Link>
-          <Link href="/login" className="nav-cta">
-            Launch SERP Lab
-          </Link>
+          {session?.user ? (
+            <>
+              <Link href="/dashboard" className="nav-link" style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+                <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#059669' }} />
+                <span>Dashboard ({session.user.name?.split(' ')[0] || 'User'})</span>
+              </Link>
+              <button
+                onClick={() => signOut({ callbackUrl: '/' })}
+                className="btn btn-secondary btn-sm"
+                style={{ fontSize: 13, padding: '6px 14px' }}
+              >
+                Sign Out
+              </button>
+            </>
+          ) : (
+            <>
+              <Link href="/login" className="nav-link">
+                Sign In
+              </Link>
+              <Link href="/login" className="nav-cta">
+                Launch SERP Lab
+              </Link>
+            </>
+          )}
         </nav>
       </header>
 
@@ -145,12 +165,18 @@ export default function SeoLabsLanding() {
                 <strong>SEOlabs</strong> is the algorithmic flight simulator for search engines &amp; AI discovery. Test title tags, search intent, schema markup, and Generative Engine Optimization in a zero-risk lab before crawling begins.
               </p>
               <div className="cta-group reveal" style={{ transitionDelay: '0.4s' }}>
-                <Link href="/login" className="btn btn-primary">
-                  Launch SERP Lab
+                <Link href={session?.user ? "/dashboard" : "/login"} className="btn btn-primary">
+                  {session?.user ? "Enter Flight Deck" : "Launch SERP Lab"}
                 </Link>
-                <Link href="/login" className="btn btn-secondary">
-                  Sign In
-                </Link>
+                {session?.user ? (
+                  <Link href="/dashboard/create" className="btn btn-secondary">
+                    + New Experiment
+                  </Link>
+                ) : (
+                  <Link href="/login" className="btn btn-secondary">
+                    Sign In
+                  </Link>
+                )}
               </div>
             </div>
 

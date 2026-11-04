@@ -3,9 +3,15 @@ import prisma from '@/lib/prisma';
 import { getCurrentUser } from '@/lib/current-user';
 import { awardXP } from '@/lib/gamification';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
   try {
     const user = await getCurrentUser();
+    if (!user) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
     const experiments = await prisma.experiment.findMany({
       where: { userId: user.id },
       orderBy: { createdAt: 'desc' },
@@ -27,6 +33,10 @@ export async function GET() {
 export async function POST(req: Request) {
   try {
     const user = await getCurrentUser();
+    if (!user) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
     const body = await req.json();
 
     const {

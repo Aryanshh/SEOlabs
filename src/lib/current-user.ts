@@ -11,26 +11,9 @@ export async function getCurrentUser() {
       });
       if (user) return user;
     }
-  } catch {
-    // Session retrieval error, fallback to demo user
+  } catch (error) {
+    console.error('Error fetching current user session:', error);
   }
 
-  // Fallback to demo user for seamless lab preview
-  let demoUser = await prisma.user.findUnique({
-    where: { email: 'demo@seolabs.ai' },
-  });
-
-  if (!demoUser) {
-    demoUser = await prisma.user.create({
-      data: {
-        email: 'demo@seolabs.ai',
-        name: 'Aryan SEO',
-        currentLevel: 8,
-        totalXP: 1450,
-        seoTier: 'SERP_SCOUT',
-      },
-    });
-  }
-
-  return demoUser;
+  return null;
 }

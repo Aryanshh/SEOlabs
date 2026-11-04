@@ -5,9 +5,14 @@ import { runSeoSimulation } from '@/lib/seo-engine';
 import { analyzeSeoContentWithAi } from '@/lib/ai';
 import { awardXP, checkAndAwardBadges } from '@/lib/gamification';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
   try {
     const user = await getCurrentUser();
+    if (!user) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
     const simulations = await prisma.simulation.findMany({
       where: { userId: user.id },
       orderBy: { createdAt: 'desc' },
@@ -34,6 +39,9 @@ export async function GET() {
 export async function POST(req: Request) {
   try {
     const user = await getCurrentUser();
+    if (!user) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
     const { experimentId } = await req.json();
 
     if (!experimentId) {
