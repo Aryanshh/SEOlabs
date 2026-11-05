@@ -131,7 +131,13 @@ export default function ProgressionPage() {
                   fontWeight: 800,
                 }}
               >
-                {feat.unlocked ? '✓' : `L${feat.level}`}
+                {feat.unlocked ? (
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                ) : (
+                  `L${feat.level}`
+                )}
               </div>
               <div>
                 <div style={{ fontSize: 14, fontWeight: 700, color: feat.unlocked ? 'var(--text-primary)' : 'var(--text-muted)' }}>
@@ -164,7 +170,21 @@ export default function ProgressionPage() {
               }}
             >
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 10 }}>
-                <span style={{ fontSize: 28 }}>{b.iconEmoji}</span>
+                <div style={{
+                  width: 36,
+                  height: 36,
+                  borderRadius: 8,
+                  background: b.earned ? 'rgba(5, 150, 105, 0.12)' : 'rgba(0, 0, 0, 0.04)',
+                  color: b.earned ? 'var(--accent-primary)' : 'var(--text-muted)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="12" cy="8" r="6" />
+                    <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+                  </svg>
+                </div>
                 <span className={`badge ${b.earned ? 'badge-emerald' : 'badge-yellow'}`}>
                   {b.earned ? 'UNLOCKED' : `+${b.xpReward} XP`}
                 </span>

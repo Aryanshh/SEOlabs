@@ -7,7 +7,7 @@ const BADGES = [
   {
     name: 'First Crawl',
     description: 'Ran your first SERP algorithm experiment in the lab',
-    iconEmoji: '🔍',
+    iconEmoji: 'search',
     category: 'MILESTONE',
     criteria: JSON.stringify({ type: 'sim_count', threshold: 1 }),
     xpReward: 100,
@@ -15,7 +15,7 @@ const BADGES = [
   {
     name: 'Page One Pioneer',
     description: 'Achieved a simulated Top 10 Google ranking',
-    iconEmoji: '🎯',
+    iconEmoji: 'target',
     category: 'SERP_MASTERY',
     criteria: JSON.stringify({ type: 'serp_rank', threshold: 10 }),
     xpReward: 200,
@@ -23,7 +23,7 @@ const BADGES = [
   {
     name: 'Position #1 Crown',
     description: 'Achieved a predicted Rank #1 in search results',
-    iconEmoji: '👑',
+    iconEmoji: 'crown',
     category: 'SERP_MASTERY',
     criteria: JSON.stringify({ type: 'serp_rank_one', threshold: 1.5 }),
     xpReward: 500,
@@ -31,7 +31,7 @@ const BADGES = [
   {
     name: 'GEO Whisperer',
     description: 'Achieved >80% citation probability in AI Overviews / SearchGPT',
-    iconEmoji: '🤖',
+    iconEmoji: 'bot',
     category: 'TECHNICAL_SEO',
     criteria: JSON.stringify({ type: 'geo_score', threshold: 80 }),
     xpReward: 300,
@@ -39,7 +39,7 @@ const BADGES = [
   {
     name: 'EEAT Titan',
     description: 'Achieved an Experience, Expertise, Authoritativeness, and Trust score of 85+',
-    iconEmoji: '🛡️',
+    iconEmoji: 'shield',
     category: 'CONTENT_QUALITY',
     criteria: JSON.stringify({ type: 'eeat_score', threshold: 85 }),
     xpReward: 250,
@@ -47,7 +47,7 @@ const BADGES = [
   {
     name: 'Schema Architect',
     description: 'Configured and tested structured JSON-LD schema markup',
-    iconEmoji: '🧩',
+    iconEmoji: 'puzzle',
     category: 'TECHNICAL_SEO',
     criteria: JSON.stringify({ type: 'schema_used', threshold: 1 }),
     xpReward: 150,
@@ -55,7 +55,7 @@ const BADGES = [
   {
     name: 'Split-Test Scientist',
     description: 'Ran a head-to-head A/B title and snippet experiment',
-    iconEmoji: '🧪',
+    iconEmoji: 'flask',
     category: 'SPLIT_TESTING',
     criteria: JSON.stringify({ type: 'split_test_count', threshold: 1 }),
     xpReward: 200,
@@ -63,7 +63,7 @@ const BADGES = [
   {
     name: 'Helpful Content Ace',
     description: 'Scored 90+ on the Google Helpful Content & Information Gain Index',
-    iconEmoji: '⚡',
+    iconEmoji: 'zap',
     category: 'CONTENT_QUALITY',
     criteria: JSON.stringify({ type: 'helpful_score', threshold: 90 }),
     xpReward: 350,
@@ -71,7 +71,7 @@ const BADGES = [
   {
     name: 'Traffic Tycoon',
     description: 'Projected over 5,000 monthly organic search clicks',
-    iconEmoji: '📈',
+    iconEmoji: 'chart',
     category: 'SERP_MASTERY',
     criteria: JSON.stringify({ type: 'monthly_clicks', threshold: 5000 }),
     xpReward: 400,
@@ -79,7 +79,7 @@ const BADGES = [
   {
     name: 'Multi-Engine Master',
     description: 'Tested experiments across 4 different search engines',
-    iconEmoji: '🌐',
+    iconEmoji: 'globe',
     category: 'MILESTONE',
     criteria: JSON.stringify({ type: 'engine_count', threshold: 4 }),
     xpReward: 300,

@@ -106,7 +106,7 @@ model Badge {
   id          String      @id @default(cuid())
   name        String      @unique
   description String      @db.Text
-  iconEmoji   String      @default("🔍")
+  iconEmoji   String      @default("badge")
   category    String      // MILESTONE, SERP_MASTERY, TECHNICAL_SEO, CONTENT_QUALITY, SPLIT_TESTING
   criteria    String      @db.Text // JSON: { type, threshold }
   xpReward    Int         @default(50)

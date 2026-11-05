@@ -56,8 +56,11 @@ export default function SettingsPage() {
               Save Laboratory Preferences
             </button>
             {saved && (
-              <span style={{ color: 'var(--accent-primary)', fontSize: 13, fontWeight: 700 }}>
-                ✓ Preferences Saved
+              <span style={{ color: 'var(--accent-primary)', fontSize: 13, fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                Preferences Saved
               </span>
             )}
           </div>

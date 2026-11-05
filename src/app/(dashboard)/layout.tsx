@@ -28,9 +28,9 @@ function DashboardSidebar() {
     { href: '/dashboard', icon: '○', label: 'Overview' },
     { href: '/dashboard/create', icon: '＋', label: 'SEO Studio' },
     { href: '/dashboard/simulations', icon: '◷', label: 'Experiments' },
-    { href: '/dashboard/ab-testing', icon: '⚡', label: 'Split Arena' },
+    { href: '/dashboard/ab-testing', icon: '⇄', label: 'Split Arena' },
     { href: '/dashboard/analytics', icon: '▤', label: 'SERP Insights' },
-    { href: '/dashboard/progress', icon: '☆', label: 'Progression' },
+    { href: '/dashboard/progress', icon: '◆', label: 'Progression' },
     { href: '/dashboard/leaderboard', icon: '△', label: 'Leaderboard' },
   ];
 
@@ -89,7 +89,10 @@ function DashboardSidebar() {
             onClick={() => signOut({ callbackUrl: '/' })}
             title="Sign out"
           >
-            ✕
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
           </button>
         </div>
       </div>
@@ -112,7 +115,7 @@ function DashboardTopbar() {
       <div className="topbar-title">Search Experiment Laboratory</div>
       <div className="topbar-actions">
         <div className="topbar-xp">
-          <span>⚡ XP</span>
+          <span>XP</span>
           <span>{progress?.totalXP !== undefined ? progress.totalXP.toLocaleString() : '1,450'}</span>
         </div>
         <Link href="/dashboard/create" className="btn btn-accent btn-sm">

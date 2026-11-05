@@ -67,19 +67,27 @@ export default function ProfilePage() {
           <h3 style={{ fontSize: 18, fontWeight: 700, marginBottom: 16 }}>Lab Capabilities</h3>
           <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 12, fontSize: 14 }}>
             <li style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-              <span style={{ color: 'var(--accent-primary)', fontWeight: 800 }}>✓</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
               <span>Full Google Search SERP Simulator</span>
             </li>
             <li style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-              <span style={{ color: 'var(--accent-primary)', fontWeight: 800 }}>✓</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
               <span>Google AI Overviews &amp; GEO Citation Predictor</span>
             </li>
             <li style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-              <span style={{ color: 'var(--accent-primary)', fontWeight: 800 }}>✓</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
               <span>Head-to-Head A/B Split Test Arena</span>
             </li>
             <li style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-              <span style={{ color: 'var(--accent-primary)', fontWeight: 800 }}>✓</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
               <span>E-E-A-T &amp; Helpful Content System Validator</span>
             </li>
           </ul>

@@ -153,10 +153,10 @@ export function SerpPreview({
           {/* Rich Snippet Pills (if FAQ or schema) */}
           {richSnippetEligible && (
             <div style={{ marginTop: 14, paddingTop: 12, borderTop: '1px solid #f1f3f4', display: 'flex', flexDirection: 'column', gap: 8 }}>
-              <div style={{ fontSize: 11, color: '#70757a', fontWeight: 600 }}>✦ RICH RESULTS ACCORDION</div>
+              <div style={{ fontSize: 11, color: '#70757a', fontWeight: 600 }}>RICH RESULTS ACCORDION</div>
               <div style={{ fontSize: 13, color: '#1a0dab', display: 'flex', justifyContent: 'space-between', padding: '6px 10px', background: '#f8fafc', borderRadius: 8 }}>
                 <span>Frequently Asked: How does this rank #1?</span>
-                <span style={{ color: '#70757a' }}>▼</span>
+                <span style={{ color: '#70757a' }}>▾</span>
               </div>
               <div style={{ fontSize: 13, color: '#1a0dab', display: 'flex', justifyContent: 'space-between', padding: '6px 10px', background: '#f8fafc', borderRadius: 8 }}>
                 <span>What are the Core Web Vitals requirements?</span>
@@ -241,7 +241,9 @@ export function SerpPreview({
             }}
           >
             <div style={{ width: 20, height: 20, borderRadius: '50%', background: '#7C3AED', color: '#fff', fontSize: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800 }}>
-              ✓
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
             </div>
             <div style={{ fontSize: 13, fontWeight: 700, color: '#1E293B' }}>
               {displayTitle.slice(0, 36)}...

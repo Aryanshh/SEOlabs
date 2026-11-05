@@ -123,10 +123,10 @@ export default function DashboardOverviewPage() {
               <span>＋</span> Launch New SEO Studio Experiment
             </Link>
             <Link href="/dashboard/ab-testing" className="btn btn-secondary" style={{ justifyContent: 'flex-start' }}>
-              <span>⚡</span> Head-to-Head A/B Split Test Arena
+              <span>⇄</span> Head-to-Head A/B Split Test Arena
             </Link>
             <Link href="/dashboard/progress" className="btn btn-secondary" style={{ justifyContent: 'flex-start' }}>
-              <span>☆</span> Progression, Tier Ranks &amp; Badges
+              <span>◆</span> Progression, Tier Ranks &amp; Badges
             </Link>
             <Link href="/dashboard/analytics" className="btn btn-secondary" style={{ justifyContent: 'flex-start' }}>
               <span>▤</span> Deep SERP &amp; CTR Analytics
@@ -232,7 +232,22 @@ export default function DashboardOverviewPage() {
           </div>
         ) : (
           <div style={{ textAlign: 'center', padding: '48px 24px' }}>
-            <div style={{ fontSize: 40, marginBottom: 12 }}>🔍</div>
+            <div style={{
+              width: 56,
+              height: 56,
+              borderRadius: 14,
+              background: 'rgba(5, 150, 105, 0.1)',
+              color: 'var(--accent-primary)',
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              marginBottom: 16
+            }}>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+              </svg>
+            </div>
             <h4 style={{ fontSize: 18, fontWeight: 700, marginBottom: 6 }}>No Experiments Simulated Yet</h4>
             <p style={{ color: 'var(--text-secondary)', marginBottom: 20 }}>
               Launch your first test in the SEO Studio to see predicted Google rank, CTR, and AI Overview citations.

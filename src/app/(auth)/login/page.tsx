@@ -53,8 +53,8 @@ function LoginForm() {
           <div style={{ width: 24, height: 24, borderRadius: '50%', background: 'var(--accent-primary)' }} />
           <span style={{ fontWeight: 800, fontSize: 18 }}>seolabs</span>
         </div>
-        <h1>Access Flight Deck</h1>
-        <p>Sign in to your search experimentation lab</p>
+        <h1>Sign In</h1>
+        <p>Enter your credentials to access your account</p>
       </div>
 
       {isRegistered && (
@@ -110,7 +110,7 @@ function LoginForm() {
           className="btn btn-secondary btn-sm"
           style={{ width: '100%', marginTop: 8, fontSize: 12 }}
         >
-          ⚡ Quick Fill Demo Account
+          Quick Fill Demo Account
         </button>
       </form>
 

@@ -69,7 +69,18 @@ export default function LeaderboardPage() {
                 }}
               >
                 <td style={{ padding: '18px 20px', fontWeight: 800 }}>
-                  {u.rank === 1 ? '👑 1' : u.rank === 2 ? '🥈 2' : u.rank === 3 ? '🥉 3' : `#${u.rank}`}
+                  <span style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    width: 28,
+                    height: 28,
+                    borderRadius: 6,
+                    background: u.rank === 1 ? '#FEF3C7' : u.rank === 2 ? '#F1F5F9' : u.rank === 3 ? '#FFEDD5' : 'transparent',
+                    color: u.rank === 1 ? '#B45309' : u.rank === 2 ? '#475569' : u.rank === 3 ? '#C2410C' : 'inherit'
+                  }}>
+                    #{u.rank}
+                  </span>
                 </td>
                 <td style={{ padding: '18px 20px', fontWeight: 700 }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>

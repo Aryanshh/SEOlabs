@@ -17,25 +17,30 @@ export const authOptions: NextAuthOptions = {
         }
 
         const email = credentials.email.toLowerCase().trim();
-        const user = await prisma.user.findUnique({
-          where: { email },
-        });
+        try {
+          const user = await prisma.user.findUnique({
+            where: { email },
+          });
 
-        if (!user || !user.passwordHash) {
+          if (!user || !user.passwordHash) {
+            return null;
+          }
+
+          const isValid = await compare(credentials.password, user.passwordHash);
+          if (!isValid) {
+            return null;
+          }
+
+          return {
+            id: user.id,
+            email: user.email,
+            name: user.name || 'SEO Specialist',
+            image: user.avatar,
+          };
+        } catch (err) {
+          console.error('[NextAuth authorize error]:', err);
           return null;
         }
-
-        const isValid = await compare(credentials.password, user.passwordHash);
-        if (!isValid) {
-          return null;
-        }
-
-        return {
-          id: user.id,
-          email: user.email,
-          name: user.name || 'SEO Specialist',
-          image: user.avatar,
-        };
       },
     }),
   ],

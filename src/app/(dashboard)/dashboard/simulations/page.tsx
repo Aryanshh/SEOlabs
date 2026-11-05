@@ -108,7 +108,23 @@ export default function SimulationsHistoryPage() {
 
       {filteredSims.length === 0 ? (
         <div className="card" style={{ textAlign: 'center', padding: '60px 24px' }}>
-          <div style={{ fontSize: 36, marginBottom: 12 }}>🧪</div>
+          <div style={{
+            width: 56,
+            height: 56,
+            borderRadius: 14,
+            background: 'rgba(5, 150, 105, 0.1)',
+            color: 'var(--accent-primary)',
+            display: 'inline-flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            marginBottom: 16
+          }}>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2" />
+              <path d="M8.5 2h7" />
+              <path d="M7 16h10" />
+            </svg>
+          </div>
           <h3 style={{ marginBottom: 8, fontWeight: 700 }}>No Experiments Found</h3>
           <p style={{ color: 'var(--text-secondary)', marginBottom: 20 }}>
             {filterEngine !== 'ALL' ? `No experiments recorded for ${filterEngine}.` : 'Head over to the SEO Studio to run your first simulation!'}
@@ -171,7 +187,7 @@ export default function SimulationsHistoryPage() {
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 20 }}>
                   <h3 style={{ fontSize: 18, fontWeight: 800 }}>Experiment Telemetry</h3>
                   <button type="button" className="btn btn-ghost btn-sm" onClick={() => setSelected(null)}>
-                    ✕ Close
+                    Close
                   </button>
                 </div>
 

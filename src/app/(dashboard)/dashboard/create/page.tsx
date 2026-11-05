@@ -278,7 +278,7 @@ In our 90-day experiment, our organic growth team published 25 test pages across
                       onClick={() => removeSecondaryKeyword(kw)}
                       title="Click to remove"
                     >
-                      {kw} ✕
+                      {kw} ×
                     </span>
                   ))}
                 </div>
@@ -447,10 +447,10 @@ In our 90-day experiment, our organic growth team published 25 test pages across
                     flexWrap: 'wrap',
                   }}
                 >
-                  <span className="badge badge-emerald">⚡ XP +{result.xpAwarded}</span>
+                  <span className="badge badge-emerald">+{result.xpAwarded} XP</span>
                   {result.newBadges.map((b) => (
                     <span key={b} className="badge badge-yellow">
-                      🏆 {b} UNLOCKED
+                      {b} UNLOCKED
                     </span>
                   ))}
                 </div>
@@ -521,7 +521,6 @@ In our 90-day experiment, our organic growth team published 25 test pages across
                   }}
                 >
                   <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
-                    <span style={{ fontSize: 16 }}>⚡</span>
                     <span style={{ fontSize: 14, fontWeight: 800, textTransform: 'uppercase' }}>
                       A/B Split Test Result: {result.simulation.variantBComparison.winner.replace(/_/g, ' ')} WINS
                     </span>
