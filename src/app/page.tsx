@@ -210,7 +210,7 @@ export default function SeoLabsLanding() {
                       #1.2
                     </span>
                     <span style={{ fontSize: 16, fontWeight: 700, color: 'var(--cl-emerald)' }}>
-                      Top 3 Guaranteed
+                      Top 3 Projected
                     </span>
                   </div>
 
@@ -256,7 +256,7 @@ export default function SeoLabsLanding() {
               A simulator that <span className="cursive" style={{ color: 'var(--cl-emerald)', fontSize: '1.25em' }}>predicts</span>
             </h2>
             <p className="section-subheading">
-              We built SEOlabs to be your tactical digital testing ground. Every simulation is grounded in real-world search algorithm ranking mechanics.
+              Test titles, search intent, and structured schema against search ranking factors before publishing.
             </p>
           </div>
 

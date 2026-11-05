@@ -102,7 +102,7 @@ export default function RegisterPage() {
           </div>
 
           <button type="submit" className="btn btn-primary btn-lg" disabled={loading} style={{ width: '100%' }}>
-            {loading ? 'Initializing Account...' : 'Get Started (+50 XP)'}
+            {loading ? 'Creating account...' : 'Create Account (+50 XP)'}
           </button>
         </form>
 

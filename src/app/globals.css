@@ -255,3 +255,82 @@ html, body {
   0% { background-position: 200% 0; }
   100% { background-position: -200% 0; }
 }
+
+/* SEOlabs Minimalist Preloader */
+.seolabs-preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #0c0a09;
+  color: #fafaf9;
+  font-family: var(--font-outfit, sans-serif);
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+  pointer-events: auto;
+}
+
+.seolabs-preloader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.seolabs-preloader-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.seolabs-preloader-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid rgba(5, 150, 105, 0.25);
+  border-top-color: #059669;
+  animation: preloaderSpin 0.8s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.seolabs-preloader-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #059669;
+  box-shadow: 0 0 10px rgba(5, 150, 105, 0.6);
+}
+
+.seolabs-preloader-title {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #fafaf9;
+}
+
+.seolabs-preloader-track {
+  width: 140px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+  overflow: hidden;
+  position: relative;
+}
+
+.seolabs-preloader-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #059669;
+  border-radius: 9999px;
+  transition: width 0.15s ease-out;
+}
+
+@keyframes preloaderSpin {
+  to { transform: rotate(360deg); }
+}
