@@ -12,33 +12,37 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://seolabs.space'),
   title: {
-    default: 'SEOlabs — Algorithmic SERP Simulator & GEO Testing Lab',
-    template: '%s | SEOlabs',
+    default: 'SEOlabs — SEO Simulator & Algorithmic SERP Lab',
+    template: '%s | SEOlabs SEO Simulator',
   },
   description:
-    'Simulate Google RankBrain, Helpful Content signals, and AI Overviews citations in SEOlabs before crawling begins. Test SERP snippets with zero risk.',
+    'SEOlabs is the algorithmic SEO simulator and SERP testing lab. Simulate Google RankBrain, Helpful Content signals, and AI Overviews citations before crawling.',
   applicationName: 'SEOlabs',
   authors: [{ name: 'SEOlabs Algorithm Engineering Lab', url: 'https://seolabs.space' }],
   creator: 'SEOlabs Team',
   publisher: 'SEOlabs',
   keywords: [
     'SEOlabs',
+    'SEO simulator',
     'SEO labs',
     'seolabs',
     'seolabs.space',
-    'SEOlabs platform',
-    'SERP flight simulator',
+    'Google SEO simulator',
     'SERP simulator',
     'Google SERP simulator',
+    'algorithmic SEO simulator',
+    'search engine simulator',
+    'SERP flight simulator',
+    'SEO testing lab',
     'Generative Engine Optimization',
     'GEO testing tool',
     'Google AI Overviews citation predictor',
     'Helpful Content System audit',
     'title tag pixel width calculator',
     'SERP CTR prediction model',
-    'search engine algorithm testing',
+    'SEO algorithm testing',
     'E-E-A-T score analyzer',
-    'A/B search snippet testing',
+    'SEO split testing',
   ],
   alternates: {
     canonical: 'https://seolabs.space',
@@ -67,9 +71,9 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://seolabs.space',
     siteName: 'SEOlabs',
-    title: 'SEOlabs — Algorithmic SERP Simulator & GEO Testing Lab',
+    title: 'SEOlabs — SEO Simulator & Algorithmic SERP Lab',
     description:
-      'Simulate Google RankBrain, Helpful Content signals, and AI Overviews citations in SEOlabs before crawling begins.',
+      'SEOlabs is the algorithmic SEO simulator and SERP testing lab. Simulate Google RankBrain, Helpful Content signals, and AI Overviews citations before crawling.',
     images: [
       {
         url: '/opengraph-image',
@@ -81,9 +85,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SEOlabs — Algorithmic SERP Simulator & GEO Testing Lab',
+    title: 'SEOlabs — SEO Simulator & Algorithmic SERP Lab',
     description:
-      'Test title hooks, content depth, E-E-A-T, and Generative Engine Optimization in a zero-risk search lab.',
+      'SEOlabs is the algorithmic SEO simulator. Test title hooks, content depth, E-E-A-T, and Generative Engine Optimization in a zero-risk search lab.',
     images: ['/opengraph-image'],
     creator: '@seolabs',
   },
@@ -102,13 +106,14 @@ const jsonLd = {
       url: 'https://seolabs.space',
       name: 'SEOlabs',
       alternateName: [
+        'SEOlabs SEO Simulator',
+        'SEO Simulator',
         'SEO Labs',
         'seolabs',
         'seolabs.space',
         'SEOlabs Platform',
-        'SEOlabs SERP Simulator',
       ],
-      description: 'The Official SEOlabs Algorithmic SERP Flight Simulator & GEO Testing Lab',
+      description: 'The Official SEOlabs SEO Simulator & Algorithmic SERP Testing Lab',
       publisher: { '@id': 'https://seolabs.space/#organization' },
       inLanguage: 'en-US',
       potentialAction: {
@@ -125,7 +130,7 @@ const jsonLd = {
       '@id': 'https://seolabs.space/#organization',
       name: 'SEOlabs',
       legalName: 'SEOlabs',
-      alternateName: ['SEO Labs', 'seolabs', 'seolabs.space', 'SEOlabs Platform'],
+      alternateName: ['SEO Labs', 'seolabs', 'seolabs.space', 'SEOlabs Platform', 'SEOlabs SEO Simulator'],
       url: 'https://seolabs.space',
       logo: {
         '@type': 'ImageObject',
@@ -135,14 +140,15 @@ const jsonLd = {
       brand: {
         '@type': 'Brand',
         name: 'SEOlabs',
-        alternateName: 'SEO Labs',
+        alternateName: ['SEO Labs', 'SEOlabs SEO Simulator'],
       },
       description:
-        'SEOlabs is the official algorithmic SERP flight simulator and Generative Engine Optimization testing laboratory.',
+        'SEOlabs is the official algorithmic SEO simulator and Generative Engine Optimization testing laboratory.',
       sameAs: [
         'https://github.com/Aryanshh/SEOlabs',
       ],
       knowsAbout: [
+        'SEO Simulator',
         'Search Engine Optimization',
         'SERP Flight Simulation',
         'Google RankBrain Algorithm',
@@ -153,11 +159,16 @@ const jsonLd = {
       ],
     },
     {
-      '@type': 'SoftwareApplication',
+      '@type': ['SoftwareApplication', 'WebApplication'],
       '@id': 'https://seolabs.space/#software',
-      name: 'SEOlabs',
-      alternateName: 'SEOlabs SERP Flight Simulator',
-      applicationCategory: 'BusinessApplication',
+      name: 'SEOlabs SEO Simulator',
+      alternateName: [
+        'SEOlabs',
+        'SEO Simulator',
+        'SEOlabs SERP Simulator',
+        'Google SEO Simulator',
+      ],
+      applicationCategory: 'BusinessApplication, DeveloperApplication, SEOApplication',
       operatingSystem: 'All Modern Web Browsers',
       url: 'https://seolabs.space',
       offers: {
@@ -173,7 +184,7 @@ const jsonLd = {
         worstRating: '1',
       },
       featureList: [
-        'Google RankBrain & Helpful Content System scoring',
+        'Algorithmic SEO simulator for Google RankBrain & Helpful Content scoring',
         'Google AI Overviews citation prediction & GEO audit',
         'Desktop & mobile SERP pixel width truncation simulation',
         'A/B split-testing title tag arena with CTR curves',

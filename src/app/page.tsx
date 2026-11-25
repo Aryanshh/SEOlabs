@@ -39,8 +39,12 @@ export default function SeoLabsLanding() {
 
   const faqs = [
     {
+      q: 'What is an SEO simulator?',
+      a: 'An SEO simulator is a controlled testing platform that models how modern search engine algorithms—including Google RankBrain, Helpful Content scoring, and AI Overviews—evaluate webpages. SEOlabs functions as a zero-risk SEO simulator to test title pixel truncation, search intent, schema, and CTR curves before crawling begins.',
+    },
+    {
       q: 'What is a SERP flight simulator?',
-      a: 'A SERP flight simulator is a controlled testing ground that replicates modern search engine ranking algorithms—including Google RankBrain, the Helpful Content System, and AI Overviews—enabling digital marketers and technical SEOs to test title tags, search intent, schema, and CTR curves in a zero-risk lab before search engine bots crawl the page.',
+      a: 'A SERP flight simulator replicates real-world search engine results page (SERP) conditions. In SEOlabs, you can visualize how title tags, meta descriptions, and rich snippets render across desktop and mobile pixel limits, and predict click-through rates using algorithmic CTR distribution models.',
     },
     {
       q: 'How does SEOlabs simulate Google AI Overviews and GEO citations?',
@@ -123,6 +127,12 @@ export default function SeoLabsLanding() {
         </div>
 
         <nav className="nav-links" aria-label="Main Navigation">
+          <Link href="/about" className="nav-link">
+            About
+          </Link>
+          <Link href="/guides/seo-split-testing" className="nav-link">
+            Guides
+          </Link>
           {session?.user ? (
             <>
               <Link href="/dashboard" className="nav-link" style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
@@ -143,7 +153,7 @@ export default function SeoLabsLanding() {
                 Sign In
               </Link>
               <Link href="/login" className="nav-cta">
-                Launch SERP Lab
+                Launch SEO Simulator
               </Link>
             </>
           )}
@@ -159,14 +169,14 @@ export default function SeoLabsLanding() {
               <h1 id="hero-title" className="reveal">
                 <span className="hero-eyebrow">
                   <span className="pulse-dot" aria-hidden="true" />
-                  The Official SERP Flight Simulator
+                  Algorithmic Search Testing Platform
                 </span>
                 <span className="hero-main-heading">
-                  SEOlabs: Master search algorithms before crawling begins
+                  SEOlabs: The Next-Gen SEO Simulator &amp; SERP Testing Lab
                 </span>
               </h1>
               <p className="reveal" style={{ transitionDelay: '0.2s' }}>
-                <strong>SEOlabs</strong> is the algorithmic search simulator built for technical SEOs and modern growth teams. Test title hooks, search intent alignment, schema markup, and Generative Engine Optimization in a zero-risk lab before search engine crawlers arrive.
+                <strong>SEOlabs</strong> is the algorithmic <strong>SEO simulator</strong> and SERP flight deck built for technical SEO teams. Test title tags, Google RankBrain intent matching, schema markup, and Generative Engine Optimization (GEO) before search crawlers index your pages.
               </p>
               <div className="cta-group reveal" style={{ transitionDelay: '0.4s' }}>
                 <Link href={session?.user ? "/dashboard" : "/login"} className="btn btn-primary">
@@ -257,10 +267,10 @@ export default function SeoLabsLanding() {
         <section className="section" aria-labelledby="features-title">
           <div className="reveal" style={{ textAlign: 'center', marginBottom: 48 }}>
             <h2 id="features-title" className="section-heading">
-              A simulator that <span className="cursive" style={{ color: 'var(--cl-emerald)', fontSize: '1.25em' }}>predicts</span>
+              An SEO simulator that <span className="cursive" style={{ color: 'var(--cl-emerald)', fontSize: '1.25em' }}>predicts</span> rankings
             </h2>
             <p className="section-subheading">
-              Test titles, search intent, and structured schema against search ranking factors before publishing.
+              Test title hooks, neural intent, and structured schema in an advanced SEO simulator before publishing.
             </p>
           </div>
 
@@ -314,7 +324,7 @@ export default function SeoLabsLanding() {
               Platform Architecture
             </span>
             <h2 id="about-seolabs-title" className="section-heading">
-              Why SEOlabs is the Search Simulator for Modern Teams
+              Why SEOlabs is the Premier SEO Simulator for Modern Teams
             </h2>
             <p className="section-subheading">
               Eliminate ranking uncertainty with controlled offline search algorithm simulation.
@@ -325,10 +335,10 @@ export default function SeoLabsLanding() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '32px' }}>
               <div>
                 <h3 style={{ fontSize: 22, fontWeight: 800, marginBottom: 12, color: 'var(--cl-stone-900)' }}>
-                  What is SEOlabs?
+                  What is the SEOlabs SEO Simulator?
                 </h3>
                 <p style={{ color: 'var(--cl-stone-500)', lineHeight: 1.65, fontSize: 16 }}>
-                  SEOlabs is an algorithmic search engine result page (SERP) simulator and Generative Engine Optimization (GEO) testing laboratory. Instead of waiting weeks for search engines to crawl and re-index changes, SEOlabs models how neural ranking algorithms evaluate content, schema, and title hooks in an isolated sandbox.
+                  SEOlabs is an algorithmic <strong>SEO simulator</strong> and Generative Engine Optimization (GEO) testing laboratory. Instead of waiting weeks for Google to crawl and index live experiments, the SEOlabs simulator models how neural ranking algorithms evaluate content, schema, and title hooks in an isolated sandbox.
                 </p>
               </div>
 
@@ -545,15 +555,15 @@ export default function SeoLabsLanding() {
       <footer style={{ padding: '60px 24px', textAlign: 'center', color: 'var(--cl-stone-400)', fontSize: 14, borderTop: '1px solid var(--cl-stone-200)' }}>
         <div style={{ display: 'flex', justifyContent: 'center', gap: 24, marginBottom: 20, flexWrap: 'wrap' }}>
           <Link href="/" style={{ color: 'var(--cl-stone-500)', textDecoration: 'none', fontWeight: 600 }}>Home</Link>
+          <Link href="/about" style={{ color: 'var(--cl-stone-500)', textDecoration: 'none', fontWeight: 600 }}>About SEOlabs</Link>
+          <Link href="/guides/seo-split-testing" style={{ color: 'var(--cl-stone-500)', textDecoration: 'none', fontWeight: 600 }}>SEO Split Testing Guide</Link>
+          <Link href="/login" style={{ color: 'var(--cl-stone-500)', textDecoration: 'none', fontWeight: 600 }}>SEO Simulator</Link>
           <Link href="/login" style={{ color: 'var(--cl-stone-500)', textDecoration: 'none', fontWeight: 600 }}>Sign In</Link>
-          <Link href="/login" style={{ color: 'var(--cl-stone-500)', textDecoration: 'none', fontWeight: 600 }}>SERP Lab</Link>
-          <Link href="/login" style={{ color: 'var(--cl-stone-500)', textDecoration: 'none', fontWeight: 600 }}>A/B Split Arena</Link>
-          <Link href="/login" style={{ color: 'var(--cl-stone-500)', textDecoration: 'none', fontWeight: 600 }}>Leaderboard</Link>
           <a href="https://github.com/Aryanshh/SEOlabs" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--cl-stone-500)', textDecoration: 'none', fontWeight: 600 }}>GitHub</a>
         </div>
         <p style={{ fontWeight: 600 }}>&copy; 2026 SEOlabs. Built for the next generation of search engine strategists.</p>
         <p style={{ fontSize: 12, marginTop: 8, color: 'var(--cl-stone-400)' }}>
-          seolabs.space — Algorithmic SERP Flight Simulator, Google Helpful Content &amp; Generative Engine Optimization Lab.
+          seolabs.space — Algorithmic SEO Simulator, SERP Flight Deck &amp; Generative Engine Optimization Lab.
         </p>
       </footer>
     </div>
