@@ -12,11 +12,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://seolabs.space'),
   title: {
-    default: 'SEOlabs — The Algorithmic SERP Flight Simulator & GEO Testing Lab',
-    template: '%s | SEOlabs SERP Simulator',
+    default: 'SEOlabs — Algorithmic SERP Simulator & GEO Testing Lab',
+    template: '%s | SEOlabs',
   },
   description:
-    'Official SEOlabs Platform: Simulate Google RankBrain, Helpful Content signals, AI Overviews citation probability, and SERP click-through rates in a zero-risk search algorithm laboratory before crawling begins.',
+    'Simulate Google RankBrain, Helpful Content signals, and AI Overviews citations in SEOlabs before crawling begins. Test SERP snippets with zero risk.',
   applicationName: 'SEOlabs',
   authors: [{ name: 'SEOlabs Algorithm Engineering Lab', url: 'https://seolabs.space' }],
   creator: 'SEOlabs Team',
@@ -24,8 +24,9 @@ export const metadata: Metadata = {
   keywords: [
     'SEOlabs',
     'SEO labs',
+    'seolabs',
     'seolabs.space',
-    'SEOlabs AI',
+    'SEOlabs platform',
     'SERP flight simulator',
     'SERP simulator',
     'Google SERP simulator',
@@ -66,9 +67,9 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://seolabs.space',
     siteName: 'SEOlabs',
-    title: 'SEOlabs — The Algorithmic SERP Flight Simulator & GEO Testing Lab',
+    title: 'SEOlabs — Algorithmic SERP Simulator & GEO Testing Lab',
     description:
-      'Simulate Google RankBrain, Helpful Content, AI Overviews citations, and SERP click-through rates before crawling begins.',
+      'Simulate Google RankBrain, Helpful Content signals, and AI Overviews citations in SEOlabs before crawling begins.',
     images: [
       {
         url: '/opengraph-image',
@@ -80,7 +81,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SEOlabs — The Algorithmic SERP Flight Simulator',
+    title: 'SEOlabs — Algorithmic SERP Simulator & GEO Testing Lab',
     description:
       'Test title hooks, content depth, E-E-A-T, and Generative Engine Optimization in a zero-risk search lab.',
     images: ['/opengraph-image'],
@@ -104,7 +105,7 @@ const jsonLd = {
         'SEO Labs',
         'seolabs',
         'seolabs.space',
-        'SEOlabs AI',
+        'SEOlabs Platform',
         'SEOlabs SERP Simulator',
       ],
       description: 'The Official SEOlabs Algorithmic SERP Flight Simulator & GEO Testing Lab',
@@ -123,23 +124,41 @@ const jsonLd = {
       '@type': 'Organization',
       '@id': 'https://seolabs.space/#organization',
       name: 'SEOlabs',
-      alternateName: ['SEO Labs', 'seolabs', 'seolabs.space', 'SEOlabs Engineering'],
+      legalName: 'SEOlabs',
+      alternateName: ['SEO Labs', 'seolabs', 'seolabs.space', 'SEOlabs Platform'],
       url: 'https://seolabs.space',
       logo: {
         '@type': 'ImageObject',
         url: 'https://seolabs.space/icon.svg',
         caption: 'SEOlabs Search Radar Logo',
       },
+      brand: {
+        '@type': 'Brand',
+        name: 'SEOlabs',
+        alternateName: 'SEO Labs',
+      },
+      description:
+        'SEOlabs is the official algorithmic SERP flight simulator and Generative Engine Optimization testing laboratory.',
       sameAs: [
         'https://github.com/Aryanshh/SEOlabs',
+      ],
+      knowsAbout: [
+        'Search Engine Optimization',
+        'SERP Flight Simulation',
+        'Google RankBrain Algorithm',
+        'Helpful Content System',
+        'Generative Engine Optimization (GEO)',
+        'AI Overviews Citations',
+        'Title Tag Truncation Modeling',
       ],
     },
     {
       '@type': 'SoftwareApplication',
-      '@id': 'https://seolabs.space/#application',
-      name: 'SEOlabs SERP Flight Simulator',
+      '@id': 'https://seolabs.space/#software',
+      name: 'SEOlabs',
+      alternateName: 'SEOlabs SERP Flight Simulator',
       applicationCategory: 'BusinessApplication',
-      operatingSystem: 'All (Modern Web Browsers)',
+      operatingSystem: 'All Modern Web Browsers',
       url: 'https://seolabs.space',
       offers: {
         '@type': 'Offer',
@@ -150,6 +169,8 @@ const jsonLd = {
         '@type': 'AggregateRating',
         ratingValue: '4.9',
         ratingCount: '138',
+        bestRating: '5',
+        worstRating: '1',
       },
       featureList: [
         'Google RankBrain & Helpful Content System scoring',
@@ -157,6 +178,24 @@ const jsonLd = {
         'Desktop & mobile SERP pixel width truncation simulation',
         'A/B split-testing title tag arena with CTR curves',
         '24-month crawl velocity roadmap and compounding calculator',
+      ],
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': 'https://seolabs.space/#breadcrumbs',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://seolabs.space',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'SEOlabs Flight Simulator',
+          item: 'https://seolabs.space/#simulator',
+        },
       ],
     },
     {
@@ -201,6 +240,14 @@ const jsonLd = {
           acceptedAnswer: {
             '@type': 'Answer',
             text: 'Yes. The SEOlabs A/B Arena lets you evaluate two competing title tags and meta descriptions simultaneously, predicting winner margins, expected click lifts, and SERP visibility before pushing changes to production.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Who is SEOlabs built for and how do I get started?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'SEOlabs is built for SEO consultants, growth marketing teams, and content engineers who want to test SERP ranking hypotheses before indexing. You can sign in, configure target queries, and launch your first simulation in the flight deck.',
           },
         },
       ],

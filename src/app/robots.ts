@@ -7,15 +7,10 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: '*',
-        allow: [
-          '/',
-          '/login',
-          '/register',
-        ],
+        allow: '/',
         disallow: [
           '/api/',
           '/dashboard/',
-          '/_next/',
           '/admin/',
         ],
       },
@@ -25,6 +20,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: [
           '/api/',
           '/dashboard/',
+          '/admin/',
         ],
       },
       {
@@ -33,6 +29,21 @@ export default function robots(): MetadataRoute.Robots {
         disallow: [
           '/api/',
           '/dashboard/',
+          '/admin/',
+        ],
+      },
+      {
+        userAgent: [
+          'OAI-SearchBot',
+          'Claude-SearchBot',
+          'PerplexityBot',
+          'Applebot',
+        ],
+        allow: '/',
+        disallow: [
+          '/api/',
+          '/dashboard/',
+          '/admin/',
         ],
       },
     ],

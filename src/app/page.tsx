@@ -58,6 +58,10 @@ export default function SeoLabsLanding() {
       q: 'Can I test title tags head-to-head with A/B simulation?',
       a: 'Yes. The SEOlabs A/B Arena lets you evaluate two competing title tags and meta descriptions simultaneously, predicting winner margins, expected click lifts, and SERP visibility before pushing changes to production.',
     },
+    {
+      q: 'Who is SEOlabs built for and how do I get started?',
+      a: 'SEOlabs is built for SEO consultants, growth marketing teams, and content engineers who want to test SERP ranking hypotheses before indexing. You can sign in, configure target queries, and launch your first simulation in the flight deck.',
+    },
   ];
 
   const handleWaitlist = (e: React.FormEvent) => {
@@ -155,14 +159,14 @@ export default function SeoLabsLanding() {
               <h1 id="hero-title" className="reveal">
                 <span className="hero-eyebrow">
                   <span className="pulse-dot" aria-hidden="true" />
-                  SEOlabs™ Flight Simulator
+                  The Official SERP Flight Simulator
                 </span>
                 <span className="hero-main-heading">
-                  Master the algorithm, <span className="cursive cursive-word">intentionally</span>
+                  SEOlabs: Master search algorithms before crawling begins
                 </span>
               </h1>
               <p className="reveal" style={{ transitionDelay: '0.2s' }}>
-                <strong>SEOlabs</strong> is the algorithmic flight simulator for search engines &amp; AI discovery. Test title tags, search intent, schema markup, and Generative Engine Optimization in a zero-risk lab before crawling begins.
+                <strong>SEOlabs</strong> is the algorithmic search simulator built for technical SEOs and modern growth teams. Test title hooks, search intent alignment, schema markup, and Generative Engine Optimization in a zero-risk lab before search engine crawlers arrive.
               </p>
               <div className="cta-group reveal" style={{ transitionDelay: '0.4s' }}>
                 <Link href={session?.user ? "/dashboard" : "/login"} className="btn btn-primary">
@@ -300,6 +304,81 @@ export default function SeoLabsLanding() {
                 Forecast sandbox release dates, core update resilience, and long-term organic compounding through realistic crawl curves.
               </p>
             </article>
+          </div>
+        </section>
+
+        {/* Entity Deep-Dive: What is SEOlabs? */}
+        <section className="section" aria-labelledby="about-seolabs-title" style={{ paddingTop: 0 }}>
+          <div className="reveal" style={{ textAlign: 'center', marginBottom: 44 }}>
+            <span className="section-badge">
+              Platform Architecture
+            </span>
+            <h2 id="about-seolabs-title" className="section-heading">
+              Why SEOlabs is the Search Simulator for Modern Teams
+            </h2>
+            <p className="section-subheading">
+              Eliminate ranking uncertainty with controlled offline search algorithm simulation.
+            </p>
+          </div>
+
+          <div className="card reveal" style={{ padding: '48px', maxWidth: 1040, margin: '0 auto', background: 'var(--cl-surface)', border: '1px solid var(--cl-stone-200)', borderRadius: 'var(--radius-lg)' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '32px' }}>
+              <div>
+                <h3 style={{ fontSize: 22, fontWeight: 800, marginBottom: 12, color: 'var(--cl-stone-900)' }}>
+                  What is SEOlabs?
+                </h3>
+                <p style={{ color: 'var(--cl-stone-500)', lineHeight: 1.65, fontSize: 16 }}>
+                  SEOlabs is an algorithmic search engine result page (SERP) simulator and Generative Engine Optimization (GEO) testing laboratory. Instead of waiting weeks for search engines to crawl and re-index changes, SEOlabs models how neural ranking algorithms evaluate content, schema, and title hooks in an isolated sandbox.
+                </p>
+              </div>
+
+              <div>
+                <h3 style={{ fontSize: 22, fontWeight: 800, marginBottom: 12, color: 'var(--cl-stone-900)' }}>
+                  The SEOlabs Methodology
+                </h3>
+                <p style={{ color: 'var(--cl-stone-500)', lineHeight: 1.65, fontSize: 16 }}>
+                  Search engine optimization has moved beyond manual keyword frequency. Modern search engines evaluate information gain, neural query intent, and user engagement curves. SEOlabs tests content against these multi-variable scoring models so you publish with validated confidence.
+                </p>
+              </div>
+            </div>
+
+            <div style={{ marginTop: 36, paddingTop: 32, borderTop: '1px solid var(--cl-stone-100)', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '20px' }}>
+              <div style={{ padding: '16px', background: 'var(--cl-stone-100)', borderRadius: 'var(--radius-md)' }}>
+                <div style={{ fontSize: 12, fontWeight: 800, color: 'var(--cl-emerald)', textTransform: 'uppercase', marginBottom: 6 }}>
+                  RankBrain Intent
+                </div>
+                <div style={{ fontSize: 14, color: 'var(--cl-stone-800)', lineHeight: 1.5 }}>
+                  Measures conceptual proximity between search queries and body text.
+                </div>
+              </div>
+
+              <div style={{ padding: '16px', background: 'var(--cl-stone-100)', borderRadius: 'var(--radius-md)' }}>
+                <div style={{ fontSize: 12, fontWeight: 800, color: 'var(--cl-emerald)', textTransform: 'uppercase', marginBottom: 6 }}>
+                  Helpful Content Audit
+                </div>
+                <div style={{ fontSize: 14, color: 'var(--cl-stone-800)', lineHeight: 1.5 }}>
+                  Quantifies original information gain and E-E-A-T signals across page sections.
+                </div>
+              </div>
+
+              <div style={{ padding: '16px', background: 'var(--cl-stone-100)', borderRadius: 'var(--radius-md)' }}>
+                <div style={{ fontSize: 12, fontWeight: 800, color: 'var(--cl-emerald)', textTransform: 'uppercase', marginBottom: 6 }}>
+                  AI Overviews &amp; GEO
+                </div>
+                <div style={{ fontSize: 14, color: 'var(--cl-stone-800)', lineHeight: 1.5 }}>
+                  Estimates citation probability inside Gemini and SearchGPT summaries.
+                </div>
+              </div>
+
+              <div style={{ padding: '16px', background: 'var(--cl-stone-100)', borderRadius: 'var(--radius-md)' }}>
+                <div style={{ fontSize: 12, fontWeight: 800, color: 'var(--cl-emerald)', textTransform: 'uppercase', marginBottom: 6 }}>
+                  Pixel-Accurate Snippets
+                </div>
+                <div style={{ fontSize: 14, color: 'var(--cl-stone-800)', lineHeight: 1.5 }}>
+                  Previews desktop (600px) and mobile (680px) title truncation limits.
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 

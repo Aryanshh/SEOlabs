@@ -1,0 +1,17 @@
+# SEOlabs
+
+> SEOlabs is an algorithmic search engine result page (SERP) flight simulator and Generative Engine Optimization (GEO) testing laboratory. Marketers and developers simulate Google RankBrain, Helpful Content signals, AI Overviews citation probabilities, and SERP click-through rates before crawling begins.
+
+## Platform Capabilities
+
+- [Algorithmic SERP Flight Simulator](https://seolabs.space/): Real-time simulation of Google RankBrain, Helpful Content scoring, and SERP snippet pixel boundaries (600px desktop / 680px mobile).
+- [Generative Engine Optimization (GEO) Testing](https://seolabs.space/): Estimates citation probability in Google AI Overviews and SearchGPT by evaluating content information gain, entity density, and schema hierarchy.
+- [A/B Title Tag & CTR Split Arena](https://seolabs.space/login): Head-to-head title tag and meta description evaluation using modern non-linear CTR distribution curves.
+- [Crawl Velocity & Compounding Forecaster](https://seolabs.space/): 24-month roadmap modeling crawl budget, sandbox exit timelines, and organic traffic growth.
+
+## Entity Details
+
+- Platform Name: SEOlabs
+- Website: https://seolabs.space
+- Primary Keyword: SEOlabs, SERP Flight Simulator, Generative Engine Optimization
+- Source Repository: https://github.com/Aryanshh/SEOlabs
