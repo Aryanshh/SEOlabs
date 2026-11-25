@@ -3,18 +3,18 @@ import Link from 'next/link';
 import '@/app/theme.css';
 
 export const metadata: Metadata = {
-  title: 'About SEOlabs — Research Methodology & SEO Simulator Engine',
+  title: 'About SEOlabs (SEO Labs) — Research Methodology & SEO Simulator Engine',
   description:
-    'Learn about the research foundation of SEOlabs. An algorithmic SEO simulator bringing statistical rigor, neural intent modeling, and zero-risk experimentation to search marketing.',
+    'Learn about the research foundation of SEOlabs (SEO Labs). An algorithmic SEO simulator bringing statistical rigor, neural intent modeling, and zero-risk experimentation to search marketing.',
   alternates: {
     canonical: 'https://seolabs.space/about',
   },
   openGraph: {
-    title: 'About SEOlabs — Research Methodology & SEO Simulator Engine',
+    title: 'About SEOlabs (SEO Labs) — Research Methodology & SEO Simulator Engine',
     description:
-      'Learn about the research foundation of SEOlabs. An algorithmic SEO simulator bringing statistical rigor and zero-risk experimentation to search marketing.',
+      'Learn about the research foundation of SEOlabs (SEO Labs). An algorithmic SEO simulator bringing statistical rigor and zero-risk experimentation to search marketing.',
     url: 'https://seolabs.space/about',
-    siteName: 'SEOlabs',
+    siteName: 'SEOlabs (SEO Labs)',
     type: 'article',
   },
 };
@@ -28,7 +28,7 @@ export default function AboutPage() {
 
       {/* Navigation Header */}
       <header className="nav-container">
-        <Link href="/" className="logo" aria-label="SEOlabs Home">
+        <Link href="/" className="logo" aria-label="SEOlabs (SEO Labs) Official Home" title="SEOlabs | SEO Labs">
           <div className="logo-circle">
             <div className="logo-dot" />
           </div>
@@ -57,7 +57,7 @@ export default function AboutPage() {
               Academic &amp; Engineering Foundation
             </span>
             <h1 style={{ fontSize: 'clamp(32px, 5vw, 44px)', fontWeight: 900, letterSpacing: '-1px', lineHeight: 1.2, color: 'var(--cl-stone-900)' }}>
-              About SEOlabs: The Scientific Approach to Search Algorithms
+              About SEOlabs (SEO Labs): The Scientific Approach to Search Algorithms
             </h1>
             <p style={{ marginTop: '16px', fontSize: '18px', color: 'var(--cl-stone-500)', lineHeight: 1.6 }}>
               Bridging the divide between empirical data science and modern search engine optimization.
@@ -72,7 +72,7 @@ export default function AboutPage() {
               Traditional search engine optimization has long been plagued by superstition, unverified correlation studies, and trial-and-error publishing. Every major algorithm update triggers panic across marketing teams because changes are tested directly on live production URLs.
             </p>
             <p style={{ color: 'var(--cl-stone-500)', lineHeight: 1.7, fontSize: '16px' }}>
-              <strong>SEOlabs</strong> was built to transform SEO into an empirical discipline. By providing a simulated search environment, SEOlabs allows digital marketers, engineers, and content creators to evaluate neural intent distance, title pixel truncation, and Generative Engine Optimization (GEO) before search engine bots crawl the page.
+              <strong>SEOlabs</strong> (also known as <strong>SEO Labs</strong>) was built to transform SEO into an empirical discipline. By providing a simulated search environment, SEOlabs allows digital marketers, engineers, and content creators to evaluate neural intent distance, title pixel truncation, and Generative Engine Optimization (GEO) before search engine bots crawl the page.
             </p>
           </section>
 

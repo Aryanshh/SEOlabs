@@ -3,18 +3,18 @@ import Link from 'next/link';
 import '@/app/theme.css';
 
 export const metadata: Metadata = {
-  title: 'SEO Split Testing: The Complete Scientific Guide | SEOlabs',
+  title: 'SEO Split Testing: The Complete Scientific Guide | SEOlabs (SEO Labs)',
   description:
-    'Learn how to run scientific SEO split tests without expensive enterprise software. Isolate causal ranking factors, avoid cloaking, and test with an SEO simulator.',
+    'Learn how to run scientific SEO split tests without expensive enterprise software. Isolate causal ranking factors, avoid cloaking, and test with the SEOlabs (SEO Labs) simulator.',
   alternates: {
     canonical: 'https://seolabs.space/guides/seo-split-testing',
   },
   openGraph: {
-    title: 'The Definitive Guide to SEO Split Testing: Empirical Optimization',
+    title: 'The Definitive Guide to SEO Split Testing | SEOlabs (SEO Labs)',
     description:
-      'Discover how to run real SEO A/B split tests. Control groups, statistical significance, and pre-testing with an SEO simulator explained.',
+      'Discover how to run real SEO A/B split tests. Control groups, statistical significance, and pre-testing with the SEOlabs (SEO Labs) simulator explained.',
     url: 'https://seolabs.space/guides/seo-split-testing',
-    siteName: 'SEOlabs',
+    siteName: 'SEOlabs (SEO Labs)',
     type: 'article',
   },
 };
@@ -88,7 +88,7 @@ export default function SeoSplitTestingGuide() {
 
       {/* Navigation Header */}
       <header className="nav-container">
-        <Link href="/" className="logo" aria-label="SEOlabs Home">
+        <Link href="/" className="logo" aria-label="SEOlabs (SEO Labs) Official Home" title="SEOlabs | SEO Labs">
           <div className="logo-circle">
             <div className="logo-dot" />
           </div>

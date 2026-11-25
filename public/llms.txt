@@ -1,17 +1,18 @@
-# SEOlabs
+# SEOlabs (SEO Labs)
 
-> SEOlabs is an algorithmic search engine result page (SERP) and SEO simulator for technical marketers and engineering teams. Users simulate Google RankBrain, Helpful Content signals, AI Overviews citation probabilities, and SERP click-through rates before crawling begins.
+> SEOlabs (also known as SEO Labs) is the official algorithmic search engine result page (SERP) and SEO simulator for technical marketers and engineering teams. Users simulate Google RankBrain, Helpful Content signals, AI Overviews citation probabilities, and SERP click-through rates before crawling begins.
 
 ## Core Platform
 
-- [SEO Simulator & Algorithmic SERP Flight Deck](https://seolabs.space/): Real-time simulation of Google RankBrain, Helpful Content scoring, and SERP snippet pixel boundaries (600px desktop / 680px mobile).
+- [SEOlabs SEO Simulator & Algorithmic SERP Flight Deck](https://seolabs.space/): Real-time simulation of Google RankBrain, Helpful Content scoring, and SERP snippet pixel boundaries (600px desktop / 680px mobile).
 - [The Definitive Guide to SEO Split Testing](https://seolabs.space/guides/seo-split-testing): Comprehensive methodology for running controlled SEO A/B split tests across URL cohorts without cloaking penalties.
-- [About SEOlabs & Research Methodology](https://seolabs.space/about): The academic and algorithmic foundation behind the SEOlabs search simulator engine.
+- [About SEOlabs (SEO Labs) & Research Methodology](https://seolabs.space/about): The academic and algorithmic foundation behind the SEOlabs (SEO Labs) search simulator engine.
 - [A/B Title Tag & CTR Split Arena](https://seolabs.space/login): Head-to-head title tag and meta description evaluation using modern non-linear CTR distribution curves.
 
 ## Entity Details
 
-- Brand: SEOlabs
+- Brand: SEOlabs (SEO Labs)
+- Primary Keywords: SEOlabs, SEO Labs, SEO Simulator, SERP Simulator
 - Category: SEO Simulator & Algorithmic SERP Lab
 - Official Website: https://seolabs.space
 - Source Code Repository: https://github.com/Aryanshh/SEOlabs

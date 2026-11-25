@@ -66,6 +66,10 @@ export default function SeoLabsLanding() {
       q: 'Who is SEOlabs built for and how do I get started?',
       a: 'SEOlabs is built for SEO consultants, growth marketing teams, and content engineers who want to test SERP ranking hypotheses before indexing. You can sign in, configure target queries, and launch your first simulation in the flight deck.',
     },
+    {
+      q: 'Is the platform named SEOlabs or SEO Labs?',
+      a: 'Both "SEOlabs" (compound) and "SEO Labs" (two words) refer to the same official search engine result page (SERP) simulator and GEO testing laboratory hosted at seolabs.space.',
+    },
   ];
 
   const handleWaitlist = (e: React.FormEvent) => {
@@ -88,7 +92,7 @@ export default function SeoLabsLanding() {
 
       {/* Navigation Header */}
       <header className="nav-container">
-        <Link href="/" className="logo" aria-label="SEOlabs Home">
+        <Link href="/" className="logo" aria-label="SEOlabs (SEO Labs) Official Home" title="SEOlabs | SEO Labs">
           <div className="logo-circle">
             <div className="logo-dot" />
           </div>
@@ -169,14 +173,14 @@ export default function SeoLabsLanding() {
               <h1 id="hero-title" className="reveal">
                 <span className="hero-eyebrow">
                   <span className="pulse-dot" aria-hidden="true" />
-                  Algorithmic Search Testing Platform
+                  Official Search Algorithm Flight Deck
                 </span>
                 <span className="hero-main-heading">
-                  SEOlabs: The Next-Gen SEO Simulator &amp; SERP Testing Lab
+                  SEOlabs (SEO Labs): The Algorithmic SEO Simulator &amp; SERP Lab
                 </span>
               </h1>
               <p className="reveal" style={{ transitionDelay: '0.2s' }}>
-                <strong>SEOlabs</strong> is the algorithmic <strong>SEO simulator</strong> and SERP flight deck built for technical SEO teams. Test title tags, Google RankBrain intent matching, schema markup, and Generative Engine Optimization (GEO) before search crawlers index your pages.
+                <strong>SEOlabs</strong> (also known as <strong>SEO Labs</strong>) is the official algorithmic <strong>SEO simulator</strong> and SERP testing ground built for growth teams and technical SEOs. Test title tags, Google RankBrain intent matching, schema markup, and Generative Engine Optimization (GEO) before crawlers index your pages.
               </p>
               <div className="cta-group reveal" style={{ transitionDelay: '0.4s' }}>
                 <Link href={session?.user ? "/dashboard" : "/login"} className="btn btn-primary">
@@ -324,7 +328,7 @@ export default function SeoLabsLanding() {
               Platform Architecture
             </span>
             <h2 id="about-seolabs-title" className="section-heading">
-              Why SEOlabs is the Premier SEO Simulator for Modern Teams
+              Why SEOlabs (SEO Labs) is the Premier Search Simulator for Modern Teams
             </h2>
             <p className="section-subheading">
               Eliminate ranking uncertainty with controlled offline search algorithm simulation.
@@ -335,10 +339,10 @@ export default function SeoLabsLanding() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '32px' }}>
               <div>
                 <h3 style={{ fontSize: 22, fontWeight: 800, marginBottom: 12, color: 'var(--cl-stone-900)' }}>
-                  What is the SEOlabs SEO Simulator?
+                  What is SEOlabs / SEO Labs?
                 </h3>
                 <p style={{ color: 'var(--cl-stone-500)', lineHeight: 1.65, fontSize: 16 }}>
-                  SEOlabs is an algorithmic <strong>SEO simulator</strong> and Generative Engine Optimization (GEO) testing laboratory. Instead of waiting weeks for Google to crawl and index live experiments, the SEOlabs simulator models how neural ranking algorithms evaluate content, schema, and title hooks in an isolated sandbox.
+                  <strong>SEOlabs</strong> (operating as <strong>SEO Labs</strong>) is the algorithmic <strong>SEO simulator</strong> and Generative Engine Optimization (GEO) testing laboratory. Instead of waiting weeks for Google to crawl and index live experiments, the SEOlabs simulator models how neural ranking algorithms evaluate content, schema, and title hooks in an isolated sandbox.
                 </p>
               </div>
 
@@ -561,9 +565,9 @@ export default function SeoLabsLanding() {
           <Link href="/login" style={{ color: 'var(--cl-stone-500)', textDecoration: 'none', fontWeight: 600 }}>Sign In</Link>
           <a href="https://github.com/Aryanshh/SEOlabs" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--cl-stone-500)', textDecoration: 'none', fontWeight: 600 }}>GitHub</a>
         </div>
-        <p style={{ fontWeight: 600 }}>&copy; 2026 SEOlabs. Built for the next generation of search engine strategists.</p>
+        <p style={{ fontWeight: 600 }}>&copy; 2026 SEOlabs (SEO Labs). Built for the next generation of search engine strategists.</p>
         <p style={{ fontSize: 12, marginTop: 8, color: 'var(--cl-stone-400)' }}>
-          seolabs.space — Algorithmic SEO Simulator, SERP Flight Deck &amp; Generative Engine Optimization Lab.
+          seolabs.space — Official SEOlabs (SEO Labs) Algorithmic SEO Simulator, SERP Flight Deck &amp; Generative Engine Optimization Lab.
         </p>
       </footer>
     </div>
