@@ -23,14 +23,16 @@ const guideJsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'TechArticle',
+      '@type': ['Article', 'TechArticle', 'BlogPosting'],
       '@id': 'https://seolabs.space/guides/seo-split-testing/#article',
       headline: 'The Definitive Guide to SEO Split Testing: How to Test On-Page Changes Scientifically',
       description:
         'A comprehensive guide to conducting controlled SEO split tests, isolating causal ranking factors, and verifying statistical significance with an SEO simulator.',
+      image: 'https://seolabs.space/opengraph-image',
       author: {
         '@type': 'Organization',
         name: 'SEOlabs',
+        alternateName: 'SEO Labs',
         url: 'https://seolabs.space',
       },
       publisher: {
@@ -112,6 +114,15 @@ export default function SeoSplitTestingGuide() {
 
       <main style={{ paddingTop: '120px', paddingBottom: '80px', maxWidth: '880px', margin: '0 auto', paddingLeft: '24px', paddingRight: '24px' }}>
         <article>
+          {/* Visible Semantic Breadcrumb Trail */}
+          <nav aria-label="Breadcrumb" style={{ marginBottom: '24px', fontSize: '13px', color: 'var(--cl-stone-400)', display: 'flex', alignItems: 'center', gap: '8px', justifyContent: 'center' }}>
+            <Link href="/" style={{ color: 'var(--cl-stone-500)', textDecoration: 'none', fontWeight: 600 }}>Home</Link>
+            <span aria-hidden="true">/</span>
+            <span style={{ color: 'var(--cl-stone-400)' }}>Guides</span>
+            <span aria-hidden="true">/</span>
+            <span style={{ color: 'var(--cl-emerald)', fontWeight: 700 }} aria-current="page">SEO Split Testing</span>
+          </nav>
+
           <header style={{ marginBottom: '48px', textAlign: 'center' }}>
             <span className="section-badge" style={{ marginBottom: '16px', display: 'inline-block' }}>
               Technical SEO Pillar Guide

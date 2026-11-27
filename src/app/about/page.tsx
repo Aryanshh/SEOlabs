@@ -19,9 +19,51 @@ export const metadata: Metadata = {
   },
 };
 
+const aboutJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'AboutPage',
+      '@id': 'https://seolabs.space/about/#webpage',
+      url: 'https://seolabs.space/about',
+      name: 'About SEOlabs (SEO Labs) — Research Methodology & SEO Simulator Engine',
+      description:
+        'Learn about the research foundation of SEOlabs (SEO Labs). An algorithmic SEO simulator bringing statistical rigor, neural intent modeling, and zero-risk experimentation to search marketing.',
+      isPartOf: {
+        '@id': 'https://seolabs.space/#website',
+      },
+      about: {
+        '@id': 'https://seolabs.space/#organization',
+      },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': 'https://seolabs.space/about/#breadcrumbs',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://seolabs.space',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'About SEOlabs',
+          item: 'https://seolabs.space/about',
+        },
+      ],
+    },
+  ],
+};
+
 export default function AboutPage() {
   return (
     <div className="seolabs-landing">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutJsonLd) }}
+      />
       <div className="grain-overlay" aria-hidden="true" />
       <div className="blob blob-1" aria-hidden="true" />
       <div className="blob blob-2" aria-hidden="true" />
@@ -52,6 +94,13 @@ export default function AboutPage() {
 
       <main style={{ paddingTop: '120px', paddingBottom: '80px', maxWidth: '860px', margin: '0 auto', paddingLeft: '24px', paddingRight: '24px' }}>
         <article>
+          {/* Visible Semantic Breadcrumb Trail */}
+          <nav aria-label="Breadcrumb" style={{ marginBottom: '24px', fontSize: '13px', color: 'var(--cl-stone-400)', display: 'flex', alignItems: 'center', gap: '8px', justifyContent: 'center' }}>
+            <Link href="/" style={{ color: 'var(--cl-stone-500)', textDecoration: 'none', fontWeight: 600 }}>Home</Link>
+            <span aria-hidden="true">/</span>
+            <span style={{ color: 'var(--cl-emerald)', fontWeight: 700 }} aria-current="page">About SEOlabs</span>
+          </nav>
+
           <header style={{ marginBottom: '48px', textAlign: 'center' }}>
             <span className="section-badge" style={{ marginBottom: '16px', display: 'inline-block' }}>
               Academic &amp; Engineering Foundation
