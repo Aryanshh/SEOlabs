@@ -659,13 +659,26 @@ html, body {
 
 .reveal {
   opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.9s cubic-bezier(0.23, 1, 0.32, 1);
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  will-change: opacity, transform;
 }
 
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Above-the-fold hero section must paint instantly for optimal LCP */
+.hero,
+.hero .hero-content,
+.hero .hero-visual,
+.hero h1,
+.hero p,
+.hero .cta-group {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
 }
 
 /* ==========================================================================

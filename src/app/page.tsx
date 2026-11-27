@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { useSession, signOut } from 'next-auth/react';
 import './theme.css';
 import { GoogleIcon, AiOverviewIcon } from '@/components/Icons';
-import SeoPreloader from '@/components/SeoPreloader';
 
 export default function SeoLabsLanding() {
   const { data: session } = useSession();
@@ -83,9 +82,6 @@ export default function SeoLabsLanding() {
 
   return (
     <div className="seolabs-landing">
-      {/* Innovative SEO Holographic Preloader */}
-      <SeoPreloader />
-
       <div className="grain-overlay" aria-hidden="true" />
       <div className="blob blob-1" aria-hidden="true" />
       <div className="blob blob-2" aria-hidden="true" />
@@ -170,7 +166,7 @@ export default function SeoLabsLanding() {
         <section className="section hero" aria-labelledby="hero-title">
           <div className="hero-split">
             <div className="hero-content">
-              <h1 id="hero-title" className="reveal">
+              <h1 id="hero-title">
                 <span className="hero-eyebrow">
                   <span className="pulse-dot" aria-hidden="true" />
                   Official Search Algorithm Flight Deck
@@ -179,10 +175,10 @@ export default function SeoLabsLanding() {
                   SEOlabs (SEO Labs): The Algorithmic SEO Simulator &amp; SERP Lab
                 </span>
               </h1>
-              <p className="reveal" style={{ transitionDelay: '0.2s' }}>
+              <p>
                 <strong>SEOlabs</strong> (also known as <strong>SEO Labs</strong>) is the official algorithmic <strong>SEO simulator</strong> and SERP testing ground built for growth teams and technical SEOs. Test title tags, Google RankBrain intent matching, schema markup, and Generative Engine Optimization (GEO) before crawlers index your pages.
               </p>
-              <div className="cta-group reveal" style={{ transitionDelay: '0.4s' }}>
+              <div className="cta-group">
                 <Link href={session?.user ? "/dashboard" : "/login"} className="btn btn-primary">
                   {session?.user ? "Enter Flight Deck" : "Launch SERP Lab"}
                 </Link>
@@ -198,7 +194,7 @@ export default function SeoLabsLanding() {
               </div>
             </div>
 
-            <div className="hero-visual reveal" style={{ transitionDelay: '0.6s' }}>
+            <div className="hero-visual">
               <div className="mockup-container">
                 <div className="serp-card-mockup serp-back">
                   <div style={{ fontSize: 11, fontWeight: 800, color: '#059669', marginBottom: 8 }}>
