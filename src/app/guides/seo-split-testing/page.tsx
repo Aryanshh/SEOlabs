@@ -187,12 +187,42 @@ export default function SeoSplitTestingGuide() {
 
           <section style={{ background: 'var(--cl-surface)', padding: '40px', borderRadius: 'var(--radius-lg)', border: '1px solid var(--cl-stone-200)', marginBottom: '36px' }}>
             <h2 style={{ fontSize: '24px', fontWeight: 800, marginBottom: '16px', color: 'var(--cl-stone-900)' }}>
+              Search Quality Guidelines &amp; Enterprise Execution
+            </h2>
+            <p style={{ color: 'var(--cl-stone-500)', lineHeight: 1.7, fontSize: '16px', marginBottom: '16px' }}>
+              To protect domain indexability and avoid algorithmic ranking penalties, split tests must strictly adhere to the official{' '}
+              <a
+                href="https://developers.google.com/search/docs/crawling-indexing/testing-sites-for-google-search"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: 'var(--cl-emerald)', fontWeight: 600, textDecoration: 'underline' }}
+              >
+                Google Search Central testing guidelines
+              </a>
+              , which mandate identical HTML delivery to search engine bots and human visitors.
+            </p>
+            <p style={{ color: 'var(--cl-stone-500)', lineHeight: 1.7, fontSize: '16px' }}>
+              Furthermore, growth organizations scaling experimental architectures across high-intent commercial portals often partner with consultancies specializing in{' '}
+              <a
+                href="https://seonalabs.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: 'var(--cl-emerald)', fontWeight: 600, textDecoration: 'underline' }}
+              >
+                enterprise SEO and search visibility strategies
+              </a>{' '}
+              to forecast audience intent and eliminate algorithmic volatility before deploying production variants.
+            </p>
+          </section>
+
+          <section style={{ background: 'var(--cl-surface)', padding: '40px', borderRadius: 'var(--radius-lg)', border: '1px solid var(--cl-stone-200)', marginBottom: '36px' }}>
+            <h2 style={{ fontSize: '24px', fontWeight: 800, marginBottom: '16px', color: 'var(--cl-stone-900)' }}>
               Why Pre-Testing with an SEO Simulator is Essential
             </h2>
             <p style={{ color: 'var(--cl-stone-500)', lineHeight: 1.7, fontSize: '16px', marginBottom: '16px' }}>
               Even controlled split tests require 2 to 4 weeks to accumulate statistically significant impression volumes from Google Search Console. Running an ineffective test on live pages consumes engineering bandwidth and risks ranking regression.
             </p>
-            <p style={{ color: 'var(--cl-stone-500)', lineHeight: 1.7, fontSize: '16px', marginBottom: '16px' }}>
+            <p style={{ color: 'var(--cl-stone-500)', lineHeight: 1.7, fontSize: '16px' }}>
               By pre-testing title hooks, snippet pixel truncation, and entity relevance inside the{' '}
               <Link href="/" style={{ color: 'var(--cl-emerald)', fontWeight: 700, textDecoration: 'underline' }}>
                 SEOlabs SEO Simulator
