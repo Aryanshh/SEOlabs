@@ -190,16 +190,16 @@ export default function SeoSplitTestingGuide() {
               Search Quality Guidelines &amp; Enterprise Execution
             </h2>
             <p style={{ color: 'var(--cl-stone-500)', lineHeight: 1.7, fontSize: '16px', marginBottom: '16px' }}>
-              To protect domain indexability and avoid algorithmic ranking penalties, split tests must strictly adhere to the official{' '}
+              To protect domain indexability and avoid algorithmic ranking penalties, split tests must strictly adhere to{' '}
               <a
-                href="https://developers.google.com/search/docs/appearance/ab-testing"
+                href="https://en.wikipedia.org/wiki/A/B_testing"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: 'var(--cl-emerald)', fontWeight: 600, textDecoration: 'underline' }}
               >
-                Google Search Central testing guidelines
+                scientific A/B testing principles
               </a>
-              , which mandate identical HTML delivery to search engine bots and human visitors.
+              , ensuring control and variant groups isolate causal ranking variables without cloaking.
             </p>
             <p style={{ color: 'var(--cl-stone-500)', lineHeight: 1.7, fontSize: '16px' }}>
               Furthermore, growth organizations scaling experimental architectures across high-intent commercial portals often partner with consultancies specializing in{' '}
