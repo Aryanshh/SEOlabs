@@ -313,20 +313,15 @@ export default function RootLayout({
     <html lang="en" className={`${outfit.variable} ${reenie.variable}`}>
       <head>
         <Script
+          id="google-tag-manager"
           strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID || 'G-SEOLABS2026'}`}
+          src="https://www.googletagmanager.com/gtm.js?id=GTM-P9J5JNTV"
         />
-        <Script
-          id="google-analytics"
-          strategy="afterInteractive"
-        >
+        <Script id="gtm-init" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_GA_ID || 'G-SEOLABS2026'}', {
-              page_path: window.location.pathname,
-            });
           `}
         </Script>
         <script
@@ -335,6 +330,14 @@ export default function RootLayout({
         />
       </head>
       <body className={outfit.className}>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-P9J5JNTV"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
         <Providers>{children}</Providers>
       </body>
     </html>
