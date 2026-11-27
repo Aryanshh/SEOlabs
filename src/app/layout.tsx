@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { Outfit, Reenie_Beanie } from 'next/font/google';
+import Script from 'next/script';
 import Providers from '@/components/Providers';
 import './globals.css';
 
@@ -311,6 +312,23 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${outfit.variable} ${reenie.variable}`}>
       <head>
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID || 'G-SEOLABS2026'}`}
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+        >
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GA_ID || 'G-SEOLABS2026'}', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
