@@ -192,7 +192,7 @@ export default function SeoSplitTestingGuide() {
             <p style={{ color: 'var(--cl-stone-500)', lineHeight: 1.7, fontSize: '16px', marginBottom: '16px' }}>
               To protect domain indexability and avoid algorithmic ranking penalties, split tests must strictly adhere to the official{' '}
               <a
-                href="https://developers.google.com/search/docs/crawling-indexing/testing-sites-for-google-search"
+                href="https://developers.google.com/search/docs/appearance/ab-testing"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: 'var(--cl-emerald)', fontWeight: 600, textDecoration: 'underline' }}
